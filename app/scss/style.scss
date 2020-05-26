@@ -1,0 +1,44 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+
+html {
+   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+ul,
+li {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+   cursor: pointer;
+}
+
+button {
+   cursor: pointer;
+   border: transparent;
+   outline: transparent;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   color: #000;
+}
+
+
+
+@import "media";
