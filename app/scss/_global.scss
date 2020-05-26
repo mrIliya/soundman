@@ -1,0 +1,43 @@
+html {
+   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+ul,
+li {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+   cursor: pointer;
+}
+
+button {
+   cursor: pointer;
+   border: transparent;
+   outline: transparent;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+	font-family: "Roboto-Regular";
+	font-size: 13px;
+}
+
+.container{
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}

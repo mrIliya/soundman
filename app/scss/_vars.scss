@@ -1,0 +1,17 @@
+$main-bg: #37719B;
+$dark-bg: #251C41;
+$text-grey: #AEAEAE;
+$text-dark: #313131;
+$search-bg: #FCFCFC;
+$border: #d9d9d9;
+$green: #34C900;
+$salad: #97D513;
+$border-light: #e7e7e7;
+$nav: #474747;
+$menu: #404040;
+
+@mixin image {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}

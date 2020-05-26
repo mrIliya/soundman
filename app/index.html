@@ -1,27 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>SOUNDMAN</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 	<header class="header">
-		<div class="container">
-			<div class="header__top">
-				<div class="header__logo">
-					<img src="/images/header-logo-1.png" alt="">
+		<div class="header-wrapper">
+			<div class="container">
+				<div class="header__top">
+					<div class="header__logo">
+						<img src="/images/header-logo-1.png" alt="">
+					</div>
+					<div class="header__top-text">Интернет магазин беспроводных наушников по UA</div>
+					<div class="header__top-menu top-menu">
+						<ul class="top-menu__list">
+							<li class="top-menu__line"><a href="#" class="top-menu__link">Доставка и оплата</a></li>
+							<li class="top-menu__line"><a href="#" class="top-menu__link">Гарантия и возврат</a></li>
+							<li class="top-menu__line"><a href="#" class="top-menu__link">Пункты самовывоза</a></li>
+							<li class="top-menu__line"><a href="#" class="top-menu__link">Контакты</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-main">
+			<div class="container">
+				<div class="header-main__inner">
+					<div class="header-main__contact">
+						<a class="header-main__icon" href="tel:88005519202">
+							<img src="images/icons/phone.svg" alt="">
+						</a>
+						<div class="header-main__info">
+							<div class="header-main__text">Бесплатный звонок по UA</div>
+							<a class="header-main__number" href="tel:88005519202">8 800 551-92-02</a>
+						</div>
+					</div>
+					<div class="header-main__search">
+						<button class="header-main__btn" type="submit">
+							<img src="images/icons/search.svg" alt="">
+						</button>
+						<input class="header-main__input" type="text" placeholder="Поиск товара">
+					</div>
+					<div class="header-main__notify">
+						<a href="#" class="header-main__notification header-main__icon weight">
+							<img src="images/icons/weight.svg" alt="">
+						</a>
+						<a href="#" class="header-main__notification header-main__icon heart">
+							<img src="images/icons/heart.svg" alt="">
+						</a>
+						<a href="#" class="header-main__notification header-main__icon cart">
+							<img src="images/icons/cart.svg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-menu">
+			<div class="container">
+				<div class="header-menu__inner">
+					<div class="header-menu__goods">
+						<div class="header-menu__burger menu-desktop">
+							<div class="menu-desktop__btn"></div>
+							<ul class="menu-desktop__list">
+								<li class="menu-desktop__line">
+									<a class="menu-desktop__link" href="#">TRUE WIRELESS</a>
+								</li>
+								<li class="menu-desktop__line">
+									<a class="menu-desktop__link" href="#">Гарнитуры</a>
+								</li>
+								<li class="menu-desktop__line">
+									<a class="menu-desktop__link" href="#">Накладные</a>
+								</li>
+								<li class="menu-desktop__line">
+									<a class="menu-desktop__link" href="#">Полноразмерные</a>
+								</li>
+								<li class="menu-desktop__line">
+									<a class="menu-desktop__link" href="#">С проводом</a>
+								</li>
+								<li class="menu-desktop__line">
+									<a class="menu-desktop__link" href="#">С шейным ободком</a>
+								</li>
+							</ul>
+						</div>
+						<a class="header-menu__catalog" href="#">Каталог товаров</a>
+					</div>
+					<nav class="header-menu__nav">
+						<ul class="header-menu__list">
+							<li class="header-menu__line">
+								<a class="header-menu__link" href="#">Главная</a>
+							</li>
+							<li class="header-menu__line">
+								<a class="header-menu__link" href="#">Скидки</a>
+							</li>
+							<li class="header-menu__line">
+								<a class="header-menu__link" href="#">Новинки</a>
+							</li>
+							<li class="header-menu__line">
+								<a class="header-menu__link" href="#">Бренды</a>
+							</li>
+							<li class="header-menu__line">
+								<a class="header-menu__link" href="#">Блог</a>
+							</li>
+							<li class="header-menu__line">
+								<a class="header-menu__link" href="#">Акции</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header-menu__log">
+						<img src="images/icons/account.svg" alt="">
+						<a class="header-menu__enter" href="#">Вход/Регистрация</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</header>
-  
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/libs.min.js"></script>
-  <script src="js/main.js"></script>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
+
 </html>

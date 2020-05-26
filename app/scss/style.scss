@@ -1,44 +1,225 @@
+@import "global";
 @import "vars";
 @import "libs";
 @import "fonts";
 
-html {
-   box-sizing: border-box;
+
+/* -------------------------------------------Header */
+
+.header {
+
+   .header-wrapper {
+      height: 30px;
+      background-color: $dark-bg;
+   }
+
+   &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      height: 30px;
+   }
+
+   .header__logo {
+      max-width: 123px;
+   }
+
+   .header__top-text {
+      margin-right: auto;
+      margin-left: 5px;
+   }
+
+   .top-menu__line {
+      display: inline-block;
+
+      &+li {
+         margin-left: 30px;
+      }
+   }
+
+   .top-menu__link {
+      color: #fff;
+   }
 }
 
-*,
-*::before,
-*::after {
-   box-sizing: inherit;
+.header-main {
+   padding: 25px 0;
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__contact {
+      display: flex;
+      align-items: center;
+   }
+
+   &__text {
+      color: $text-grey;
+   }
+
+   &__number {
+      font-size: 24px;
+      color: $text-dark;
+      font-family: "Roboto-Bold";
+      display: block;
+   }
+
+   &__icon {
+      margin-right: 13px;
+      border-radius: 50%;
+      border-radius: 50%;
+      box-shadow: 0px 5.81081px 15.1081px rgba(140, 121, 199, 0.3);
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+		align-items: center;
+		transition: all .7s;
+		
+		&:hover{
+		 background-color: $salad;
+		
+		}
+   }
+
+   &__notify {
+      display: flex;
+      align-items: center;
+   }
+
+   &__search {
+      max-width: 315px;
+      position: relative;
+   }
+
+   &__btn {
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      background-color: transparent;
+   }
+
+   &__input {
+      width: 100%;
+      height: 40px;
+      border-radius: 50px;
+      background-color: $search-bg;
+      border: 2px solid $border;
+      padding: 0 10px 0 50px;
+      outline: transparent;
+
+      &::placeholder {
+         font-size: 15px;
+         color: $text-grey;
+      }
+   }
+
+   &__notification {
+      position: relative;
+
+      &::after {
+         content: '11';
+         position: absolute;
+         top: -5px;
+         right: -5px;
+         min-width: 16px;
+         height: 16px;
+         background-color: $green;
+         border-radius: 50%;
+         color: #fff;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+			font-size: 11px;
+			padding: 2px;
+      }
+	}
+	
+	.heart{
+		&::after{
+			content: '5';
+		}
+	}
+
+	.cart{
+		&::after{
+			content: '2';
+		}
+	}
+
 }
 
-ul,
-li {
-   margin: 0;
-   padding: 0;
-   list-style: none;
+.header-menu {
+   border: 2px solid $border-light;
+   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12);
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 40px;
+      padding: 10px 0;
+
+	}
+	
+	&__goods,
+	&__log{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 2px solid $border-light;
+		border-top: transparent;
+		border-bottom: transparent;
+		height: 40px;
+		max-width: 270px;
+		width: 100%;
+	}
+
+   &__catalog {
+      font-size: 18px;
+      font-family: "Roboto-Medium";
+      color: $nav;
+	}
+	
+	&__line{
+		display: inline-block;
+		
+		&+li{
+			margin-left: 40px;
+		}
+	}
+
+	&__link{
+		font-size: 14px;
+		font-family: "Roboto-Bold";
+		color: $menu;
+		display: block;
+		height: 40px;
+		padding-top: 13px;
+		transition: all .4s;
+		&:hover{
+			border-bottom: 2px solid $salad ;
+			color: $salad;
+		}
+		
+	}
+
+	&__enter{
+		margin-left: 10px;
+		font-size: 14px;
+		color: $text-dark;
+		font-family: "Roboto-Medium";
+	}
+
 }
 
-a {
-   text-decoration: none;
-   cursor: pointer;
+.menu-desktop {
+   display: none;
 }
-
-button {
-   cursor: pointer;
-   border: transparent;
-   outline: transparent;
-}
-
-* {
-   margin: 0;
-   padding: 0;
-}
-
-body {
-   color: #000;
-}
-
 
 
 @import "media";
