@@ -674,7 +674,7 @@ template {
   font-weight: normal;
   font-style: normal; }
 
-/* -------------------------------------------Header */
+/* -------------------------------------------Header Start*/
 .header .header-wrapper {
   height: 30px;
   background-color: #251C41; }
@@ -820,3 +820,76 @@ template {
 
 .menu-desktop {
   display: none; }
+
+/* -------------------------------------------Header End*/
+/* -------------------------------------------Slider Start*/
+.slider-item {
+  background-color: #37719B;
+  text-align: center;
+  padding: 88px 0 51px 0;
+  font-family: "Roboto-Bold";
+  position: relative; }
+  .slider-item__descr {
+    position: relative;
+    max-width: 570px;
+    margin: 0 auto;
+    min-height: 590px;
+    border: 20px solid #607edf;
+    padding: 50px;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    font-size: 64px; }
+  .slider-item__text {
+    font-size: 24px;
+    margin-bottom: 20px; }
+  .slider-item__btn {
+    font-family: "Roboto-Medium";
+    font-size: 15px;
+    color: #fff;
+    width: 250px;
+    height: 60px;
+    position: absolute;
+    padding: 20px 0;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+    text-transform: capitalize;
+    border: 1px solid #fff;
+    border-radius: 50px; }
+  .slider-item__title {
+    color: #fff;
+    font-size: 192px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    margin: 0; }
+  .slider-item__product {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-height: 500px;
+    max-width: 450px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.owl-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px; }
+
+.owl-dot {
+  width: 11px !important;
+  height: 11px !important;
+  border: 2px solid #fff !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-radius: 50%; }
+  .owl-dot + button {
+    margin-left: 20px; }
+  .owl-dot.active {
+    background-color: #37719B !important; }

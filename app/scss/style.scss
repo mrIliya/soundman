@@ -4,7 +4,7 @@
 @import "fonts";
 
 
-/* -------------------------------------------Header */
+/* -------------------------------------------Header Start*/
 
 .header {
 
@@ -77,13 +77,13 @@
       height: 40px;
       display: flex;
       justify-content: center;
-		align-items: center;
-		transition: all .7s;
-		
-		&:hover{
-		 background-color: $salad;
-		
-		}
+      align-items: center;
+      transition: all .7s;
+
+      &:hover {
+         background-color: $salad;
+
+      }
    }
 
    &__notify {
@@ -134,22 +134,22 @@
          display: flex;
          justify-content: center;
          align-items: center;
-			font-size: 11px;
-			padding: 2px;
+         font-size: 11px;
+         padding: 2px;
       }
-	}
-	
-	.heart{
-		&::after{
-			content: '5';
-		}
-	}
+   }
 
-	.cart{
-		&::after{
-			content: '2';
-		}
-	}
+   .heart {
+      &::after {
+         content: '5';
+      }
+   }
+
+   .cart {
+      &::after {
+         content: '2';
+      }
+   }
 
 }
 
@@ -164,62 +164,158 @@
       height: 40px;
       padding: 10px 0;
 
-	}
-	
-	&__goods,
-	&__log{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border: 2px solid $border-light;
-		border-top: transparent;
-		border-bottom: transparent;
-		height: 40px;
-		max-width: 270px;
-		width: 100%;
-	}
+   }
+
+   &__goods,
+   &__log {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $border-light;
+      border-top: transparent;
+      border-bottom: transparent;
+      height: 40px;
+      max-width: 270px;
+      width: 100%;
+   }
 
    &__catalog {
       font-size: 18px;
       font-family: "Roboto-Medium";
       color: $nav;
-	}
-	
-	&__line{
-		display: inline-block;
-		
-		&+li{
-			margin-left: 40px;
-		}
-	}
+   }
 
-	&__link{
-		font-size: 14px;
-		font-family: "Roboto-Bold";
-		color: $menu;
-		display: block;
-		height: 40px;
-		padding-top: 13px;
-		transition: all .4s;
-		&:hover{
-			border-bottom: 2px solid $salad ;
-			color: $salad;
-		}
-		
-	}
+   &__line {
+      display: inline-block;
 
-	&__enter{
-		margin-left: 10px;
-		font-size: 14px;
-		color: $text-dark;
-		font-family: "Roboto-Medium";
-	}
+      &+li {
+         margin-left: 40px;
+      }
+   }
+
+   &__link {
+      font-size: 14px;
+      font-family: "Roboto-Bold";
+      color: $menu;
+      display: block;
+      height: 40px;
+      padding-top: 13px;
+      transition: all .4s;
+
+      &:hover {
+         border-bottom: 2px solid $salad;
+         color: $salad;
+      }
+
+   }
+
+   &__enter {
+      margin-left: 10px;
+      font-size: 14px;
+      color: $text-dark;
+      font-family: "Roboto-Medium";
+   }
 
 }
 
 .menu-desktop {
    display: none;
 }
+
+/* -------------------------------------------Header End*/
+
+/* -------------------------------------------Slider Start*/
+
+.slider-item {
+   background-color: $main-bg;
+   text-align: center;
+   padding: 88px 0 51px 0;
+   font-family: "Roboto-Bold";
+   position: relative;
+
+   &__descr {
+      position: relative;
+      max-width: 570px;
+      margin: 0 auto;
+      min-height: 590px;
+      border: 20px solid $big-border;
+      padding: 50px;
+      color: rgba(255, 255, 255, .4);
+      text-transform: uppercase;
+      font-size: 64px;
+   }
+
+   &__text {
+      font-size: 24px;
+      margin-bottom: 20px;
+	}
+	
+	&__btn{
+		font-family: "Roboto-Medium";
+		font-size: 15px;
+		color: #fff;
+		width: 250px;
+		height: 60px;
+		position: absolute;
+		padding: 20px 0;
+		left: 50%;
+		bottom: 15px;
+		transform: translateX(-50%);
+		text-transform: capitalize;
+		border: 1px solid #fff;
+		border-radius: 50px;
+	}
+
+   &__title {
+      color: #fff;
+      font-size: 192px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+		transform: translate(-50%, -50%);
+		text-transform: uppercase;
+		margin: 0;
+	}
+	
+	&__product{
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		min-height: 500px;
+		max-width: 450px;
+		width: 100%;
+		position: absolute;
+		top: 50%;
+      left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+}
+
+.owl-dots {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   bottom: 20px;
+}
+
+.owl-dot {
+   width: 11px !important;
+   height: 11px !important;
+   border: 2px solid #fff !important;
+   background-color: rgba(255, 255, 255, .8) !important;
+   border-radius: 50%;
+
+   &+button {
+      margin-left: 20px;
+   }
+
+   &.active {
+      background-color: $main-bg !important;
+   }
+}
+
+
 
 
 @import "media";
