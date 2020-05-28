@@ -68,24 +68,6 @@
       display: block;
    }
 
-   &__icon {
-      margin-right: 13px;
-      border-radius: 50%;
-      border-radius: 50%;
-      box-shadow: 0px 5.81081px 15.1081px rgba(140, 121, 199, 0.3);
-      width: 40px;
-      height: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: all .7s;
-
-      &:hover {
-         background-color: $salad;
-
-      }
-   }
-
    &__notify {
       display: flex;
       align-items: center;
@@ -151,6 +133,31 @@
       }
    }
 
+}
+
+.main-icon {
+	margin-right: 13px;
+	border-radius: 50%;
+	border-radius: 50%;
+	box-shadow: 0px 5.81081px 15.1081px rgba(140, 121, 199, 0.3);
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all .7s;
+
+	&:hover {
+		background-color: $salad;
+		svg{
+			transform: scale(1.1);
+			path{
+				fill: #fff;
+				transition: all .5s;
+			}
+			
+		}
+	}
 }
 
 .header-menu {
@@ -254,7 +261,7 @@
 		font-family: "Roboto-Medium";
 		font-size: 15px;
 		color: #fff;
-		width: 250px;
+		min-width: 250px;
 		height: 60px;
 		position: absolute;
 		padding: 20px 0;
@@ -264,6 +271,12 @@
 		text-transform: capitalize;
 		border: 1px solid #fff;
 		border-radius: 50px;
+		z-index: 5;
+		transition: all .4s;
+		&:hover{
+			color: $salad;
+			border-color: $salad;
+		}
 	}
 
    &__title {
@@ -315,7 +328,9 @@
    }
 }
 
+/* -------------------------------------------Slider End*/
 
+/* -------------------------------------------Goods Start*/
 
 
 @import "media";

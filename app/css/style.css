@@ -717,19 +717,6 @@ template {
     color: #313131;
     font-family: "Roboto-Bold";
     display: block; }
-  .header-main__icon {
-    margin-right: 13px;
-    border-radius: 50%;
-    border-radius: 50%;
-    box-shadow: 0px 5.81081px 15.1081px rgba(140, 121, 199, 0.3);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all .7s; }
-    .header-main__icon:hover {
-      background-color: #97D513; }
   .header-main__notify {
     display: flex;
     align-items: center; }
@@ -773,6 +760,25 @@ template {
     content: '5'; }
   .header-main .cart::after {
     content: '2'; }
+
+.main-icon {
+  margin-right: 13px;
+  border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: 0px 5.81081px 15.1081px rgba(140, 121, 199, 0.3);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .7s; }
+  .main-icon:hover {
+    background-color: #97D513; }
+    .main-icon:hover svg {
+      transform: scale(1.1); }
+      .main-icon:hover svg path {
+        fill: #fff;
+        transition: all .5s; }
 
 .header-menu {
   border: 2px solid #e7e7e7;
@@ -846,7 +852,7 @@ template {
     font-family: "Roboto-Medium";
     font-size: 15px;
     color: #fff;
-    width: 250px;
+    min-width: 250px;
     height: 60px;
     position: absolute;
     padding: 20px 0;
@@ -855,7 +861,12 @@ template {
     transform: translateX(-50%);
     text-transform: capitalize;
     border: 1px solid #fff;
-    border-radius: 50px; }
+    border-radius: 50px;
+    z-index: 5;
+    transition: all .4s; }
+    .slider-item__btn:hover {
+      color: #97D513;
+      border-color: #97D513; }
   .slider-item__title {
     color: #fff;
     font-size: 192px;
@@ -893,3 +904,6 @@ template {
     margin-left: 20px; }
   .owl-dot.active {
     background-color: #37719B !important; }
+
+/* -------------------------------------------Slider End*/
+/* -------------------------------------------Goods Start*/
