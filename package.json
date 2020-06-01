@@ -21,7 +21,6 @@
     "owl.carousel": "^2.3.4"
   },
   "dependencies": {
-    "rateyo": "^2.3.5",
     "slick-carousel": "^1.8.1"
   }
 }

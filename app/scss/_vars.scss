@@ -1,5 +1,7 @@
-$main-bg: #37719B;
+$main-bg: #37719b;
 $dark-bg: #251C41;
+$light-bg: #13C8D4;
+$top-bg: #E6E1F2;
 $text-grey: #AEAEAE;
 $text-dark: #313131;
 $search-bg: #FCFCFC;
@@ -12,6 +14,7 @@ $menu: #404040;
 $big-border: #607edf;
 $grey: #dfdfdf;
 $title: #535353;
+$price: #444444;
 
 @mixin image {
 	background-position: center;

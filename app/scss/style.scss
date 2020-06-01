@@ -91,7 +91,7 @@
       border-radius: 50px;
       background-color: $search-bg;
       border: 2px solid $border;
-      padding: 0 10px 0 50px;
+      padding: 0 20px 0 50px;
       outline: transparent;
 
       &::placeholder {
@@ -264,6 +264,7 @@
       font-family: "Roboto-Medium";
       font-size: 15px;
       color: #fff;
+      letter-spacing: 1px;
       min-width: 250px;
       height: 60px;
       position: absolute;
@@ -275,10 +276,15 @@
       border: 1px solid #fff;
       border-radius: 50px;
       z-index: 5;
-      transition: all .4s;
+      transition: all .3s;
 
       &:hover {
-         color: $salad;
+         span {
+            font-size: 16px;
+            transition: all .3s;
+         }
+
+         padding: 18px 0;
          border-color: $salad;
       }
    }
@@ -338,11 +344,22 @@
 
 
 .goods {
-	padding: 100px 0;
-	text-align: center;
+   padding: 100px 0;
+   text-align: center;
 
    &__inner {
       display: flex;
+   }
+
+   &__content {
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      display: none;
+
+      &.active-tab {
+         display: flex;
+      }
    }
 }
 
@@ -361,27 +378,27 @@
       border-right: 4px solid $grey;
       border-radius: 5px;
       transition: all .2s;
-		display: flex;
-		align-items: center;
+      display: flex;
+      align-items: center;
 
       svg {
          display: inline-block;
-			transition: all .2s;	
-			max-width: 40px;
-			width: 100%;
-			margin-right: 35px;
+         transition: all .2s;
+         max-width: 40px;
+         width: 100%;
+         margin-right: 35px;
       }
 
       span {
-			margin-top: 4px;	
+         margin-top: 4px;
       }
 
       &+button {
          margin-top: 15px;
       }
 
-		&:hover,
-		&.active {
+      &:hover,
+      &.active {
          box-shadow: 0px 2px 10px rgba(140, 121, 199, 0.3);
          border-right: 4px solid $main-bg;
 
@@ -392,6 +409,572 @@
          }
       }
    }
+
+   &__link {
+      @include image;
+      min-width: 270px;
+      min-height: 100px;
+      display: block;
+      margin-top: 15px;
+      border-radius: 10px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-family: "Roboto-Medium";
+
+      &:hover {
+         span {
+            transform: scale(1.2);
+            transition: all .3s;
+         }
+
+      }
+   }
 }
+
+/* -------------------------------------------Goods End*/
+
+/* -------------------------------------------Choice Start*/
+
+.choice {
+   padding: 90px 50px;
+   background-color: $main-bg;
+   color: #fff;
+   text-align: center;
+
+   &__title {
+      color: #fff;
+
+      span {
+         color: #fff;
+      }
+   }
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+
+   &__item {
+      @include image;
+      max-width: 330px;
+      width: 100%;
+      min-height: 330px;
+      border: 20px solid $big-border;
+      border-radius: 10px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      font-size: 18px;
+      line-height: 1.5;
+      font-family: "Roboto-Bold";
+      overflow: hidden;
+
+      &:hover {
+         a {
+            transform: scale(1.1);
+         }
+      }
+
+      a {
+         color: #000;
+         background-color: rgba(255, 255, 255, .5);
+         width: 100%;
+         transition: all .4s;
+      }
+   }
+}
+
+/* -------------------------------------------Choice End*/
+
+
+/* -------------------------------------------Offers Start*/
+.offers {
+   padding: 100px 0;
+   text-align: center;
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+   }
+}
+
+.offers-sale {
+   background-color: $light-bg;
+   color: #fff;
+   text-align: center;
+   padding: 30px;
+
+   &__image {
+      @include image;
+      background-size: contain;
+      min-height: 151px;
+      width: 100%;
+      margin-bottom: 25px;
+   }
+
+   &__title {
+      font-size: 24px;
+      font-family: "Roboto-Bold";
+      margin-bottom: 10px;
+   }
+
+   &__text {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 20px;
+   }
+
+   &__btn {
+      width: 100%;
+      display: block;
+      background-color: $salad;
+      padding: 0 10px;
+      min-height: 50px;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 14px;
+      font-family: "Roboto-Bold";
+
+      &:hover {
+         span {
+            transform: scale(1.1);
+            transition: all .3s;
+         }
+      }
+   }
+}
+
+.offers-item {
+   position: relative;
+
+   &::after {
+      content: '-15%';
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      min-width: 50px;
+      height: 50px;
+      background-color: $salad;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      border-radius: 50%;
+   }
+
+   &__rating {
+      max-width: 80px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+   }
+
+   &__text {
+      font-size: 12px;
+      line-height: 14px;
+      color: $text-dark;
+      margin-bottom: 10px;
+   }
+
+   &__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__btn {
+      max-width: 125px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}
+
+/* -------------------------------------------Offers End*/
+
+/* -------------------------------------------Best Start*/
+
+.best {
+   background-color: $main-bg;
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      color: #fff;
+   }
+
+   &__models {
+      position: relative;
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+   }
+
+   &__image {
+      position: absolute;
+      top: -37px;
+      right: -153px;
+      z-index: 100;
+   }
+
+   &__bg {
+      max-width: 490px;
+      width: 100%;
+      min-height: 490px;
+      border: 20px solid $big-border;
+      margin: 30px 0;
+      display: flex;
+      justify-content: flex-start;
+      text-align: right;
+
+      span {
+         font-size: 64px;
+         margin-top: 30px;
+         opacity: .7;
+         text-transform: uppercase;
+         transform: rotate(-90deg);
+         display: block;
+         font-family: "Roboto-Bold";
+      }
+   }
+
+}
+
+.best-descr {
+   margin: 100px 0;
+
+   &__title {
+      font-size: 40px;
+      line-height: 48px;
+      font-family: "Roboto-Bold";
+      margin-bottom: 50px;
+
+      span {
+         font-family: "Roboto-Light";
+         display: block;
+      }
+   }
+
+   &__text {
+      font-size: 20px;
+      line-height: 30px;
+      max-width: 412px;
+      margin-bottom: 50px;
+
+      a {
+         color: $salad;
+      }
+   }
+
+}
+
+/* -------------------------------------------Best End*/
+
+/* -------------------------------------------Actions Start*/
+
+.action {
+   padding: 100px 0;
+   text-align: center;
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+   }
+
+   &__btn {
+      margin: 0 auto;
+      background-color: $main-bg;
+
+      span {
+         transition: all .4s;
+      }
+
+      &:hover {
+         background-color: $main-bg;
+
+         span {
+            display: block;
+            transform: scale(1.1);
+         }
+      }
+   }
+}
+
+.action-item {
+   padding: 35px 0 0 0;
+   position: relative;
+
+   &__action {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      min-width: 50px;
+      height: 50px;
+      background-color: #97D513;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      border-radius: 50%;
+
+   }
+
+   &__name {
+      padding: 0 14px;
+   }
+
+   &__footer {
+      min-height: 78px;
+      border-top: 1px solid $border;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__date {
+      width: 50px;
+      flex: 0 0 auto;
+      height: 50px;
+      background-color: $light-bg;
+      border-radius: 50%;
+      text-align: center;
+      padding-top: 5px;
+      color: #fff;
+      font-size: 10px;
+      text-transform: capitalize;
+      margin-right: 25px;
+
+      span {
+         display: block;
+         font-size: 24px;
+      }
+   }
+}
+
+/* -------------------------------------------Actions End*/
+
+/* -------------------------------------------Advantages Start*/
+.advantages {
+   padding: 100px 0;
+   text-align: center;
+   background-color: $main-bg;
+   color: #fff;
+
+   &__title {
+      color: #fff;
+
+      span {
+         color: #fff;
+      }
+   }
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+	}
+
+	&__wrapper{
+		width: 500px;
+		height: 500px;
+		flex: 0 0 auto;
+		border: 1px solid $text-grey;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		z-index: 15;
+	}
+
+	&__wrap{
+		width: 450px;
+		height: 450px;
+		border: 1px solid $text-grey;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+	}
+	
+	&__image{
+		width: 400px;
+		height: 400px;
+		border: 1px solid $text-grey;
+		border-radius: 50%;
+		position: relative;
+		background-color:rgba(89, 141, 179, 0.5);
+
+		img{
+			position: absolute;
+			max-width: 500px;
+			height: 500px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 20;
+		}
+	}
+}
+
+.advantages-descr {
+   max-width: 365px;
+   width: 100%;
+   padding-top: 62px;
+
+   &__item {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+		position: relative;
+		min-width: 337px;
+
+      &:last-child {
+         .advantages-descr__info {
+            border: transparent;
+         }
+      }
+   }
+
+   &__number {
+      font-size: 25px;
+      font-family: "Roboto-Bold";
+      color: $text-dark;
+      opacity: .5;
+      margin: 7px 34px 0 0;
+   }
+
+   &__circle {
+      border: 15px solid #fff;
+      background-color: $main-bg;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      flex: 0 0 auto;
+      position: absolute;
+      top: 0;
+      left: 39px;
+      z-index: 100;
+   }
+
+   &__info {
+      border-left: 1px solid $border;
+      padding: 10px 0 48px 30px;
+      width: 100%;
+   }
+
+   &__title {
+      font-size: 24px;
+      margin-bottom: 20px;
+   }
+
+   &__text {
+      font-size: 12px;
+      line-height: 18px;
+	}
+	
+	&.descr__right{
+		.advantages-descr__item{
+			&:last-child{
+				.advantages-descr__info{
+					border: transparent;
+				}
+			}
+		}
+		.advantages-descr__info{
+			border-left: none;
+			border-right: 1px solid $border;
+			padding: 10px 30px 48px 0;
+			text-align: right;
+		}
+
+		.advantages-descr__number{
+			margin: 7px 0 0 34px;
+		}
+
+		.advantages-descr__circle{
+			left: auto;
+			right: 39px;
+		}
+	}
+
+}
+
+/* -------------------------------------------Advantages End*/
+
+/* -------------------------------------------Top Start*/
+.top{
+	padding: 90px 0 90px;
+	text-align: center;
+	background-color: $top-bg;
+
+	&__title{
+		font-family: "Roboto-Bold";
+	}
+
+	&__inner{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__btn {
+      margin: 0 auto;
+		background-color: $main-bg;
+		margin-top: 35px;
+
+      span {
+         transition: all .4s;
+      }
+
+      &:hover {
+         background-color: $main-bg;
+
+         span {
+            display: block;
+            transform: scale(1.1);
+         }
+      }
+   }
+}
+
+.top-item{
+	max-width: 380px;
+	width: 100%;
+	border-radius: 10px;
+	background-color: #fff;
+	display: flex;
+	padding: 24px 10px 15px 5px;
+	margin-bottom: 15px;
+
+	&__image{
+		@include image;
+		height: 123px;
+		width: 123px;
+		flex: 0 0 auto;
+
+	}
+
+	&__info{
+		text-align: left;
+	}
+
+	&__rating{
+		margin-bottom: 10px;
+	}
+
+}
+
+/* -------------------------------------------Top End*/
 
 @import "media";
