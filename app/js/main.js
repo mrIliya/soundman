@@ -12,13 +12,15 @@ $(function () {
 
 	});
 
-	$('.goods__inner .goods-filter__btn').on('click', function(event) {
+	$('.tab-wrapper .tab').on('click', function (event) {
 		var id = $(this).attr('data-id');
-			$('.goods__inner').find('.goods__content').removeClass('active-tab').hide();
-			$('.goods__inner ').find('.goods-filter__btn').removeClass('active');
-			$(this).addClass('active');
-			$('#'+id).addClass('active-tab').fadeIn();
-			return false;
-		});
+
+		$('.tab-wrapper').find('.tab-content').removeClass('active-tab').hide();
+		$('.tab-wrapper .tabs').find('.tab').removeClass('active');
+		$(this).addClass('active');
+
+		$('#' + id).addClass('active-tab').fadeIn();
+		return false;
+	});
 
 });
