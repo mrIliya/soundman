@@ -357,7 +357,7 @@
       width: 100%;
       display: none;
 
-      &.active-tab {
+      &.current-tab {
          display: flex;
       }
    }
@@ -649,6 +649,15 @@
 
 }
 
+.communication__inner {
+   overflow: hidden;
+}
+
+.communication__image {
+   top: 63px;
+   left: 0;
+}
+
 .best-descr {
    margin: 100px 0;
 
@@ -670,9 +679,15 @@
       max-width: 412px;
       margin-bottom: 50px;
 
+      span {
+         margin-top: 20px;
+         display: block;
+      }
+
       a {
          color: $salad;
       }
+
    }
 
 }
@@ -1029,8 +1044,8 @@
 }
 
 .info-item {
-	max-width: 670px;
-	min-height: 415px;
+   max-width: 670px;
+   min-height: 415px;
    width: 100%;
    background-color: #fff;
    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.05),
@@ -1041,6 +1056,7 @@
    top: 0;
    right: 0;
    text-align: left;
+   display: none;
 
    &__title {
       font-size: 22px;
@@ -1050,18 +1066,195 @@
 
    &__text {
       font-size: 16px;
-		line-height: 30px;
-		margin-bottom: 50px;
-	}
-	
-	&__link{
-		font-size: 16px;
-		text-decoration: underline;
-		font-family: "Roboto-Bold";
-		color: $main-bg;
-	}
+      line-height: 30px;
+      margin-bottom: 50px;
+   }
+
+   &__link {
+      font-size: 16px;
+      text-decoration: underline;
+      font-family: "Roboto-Bold";
+      color: $main-bg;
+   }
+
+   &.active-tab {
+      display: block;
+   }
 }
 
 /* -------------------------------------------Info End*/
 
+
+/* -------------------------------------------About Start*/
+
+.about {
+   padding: 90px 0 80px 0;
+   background-color: $search-bg;
+   text-align: center;
+
+   &__subtitle {
+      font-size: 18px;
+      line-height: 27px;
+      margin-bottom: 62px;
+   }
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+}
+
+.about-item {
+   border-radius: 10px;
+   background-color: #fff;
+   padding: 35px 30px;
+   max-width: 300px;
+   width: 100%;
+   color: $title;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+
+   &__icon {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background-color: $grey;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+   }
+
+   &__ico {
+      display: block;
+      @include image;
+      background-size: contain;
+      width: 52px;
+      height: 52px;
+   }
+
+   &__title {
+      font-size: 18px;
+      font-family: "Roboto-Medium";
+      margin-bottom: 30px;
+   }
+
+   &__text {
+      font-size: 14px;
+      line-height: 21px;
+   }
+}
+
+/* -------------------------------------------Info End*/
+
+
+/* -------------------------------------------Footer End*/
+
+.footer {
+   background-color: $dark-bg;
+   padding: 70px 0 50px 0;
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      color: #fff;
+
+      a {
+         color: #fff;
+      }
+   }
+}
+
+.footer-item {
+
+   &__title {
+      font-size: 18px;
+      font-family: "Roboto-Medium";
+      margin-bottom: 45px;
+   }
+
+   &__line {
+      &+li {
+         margin-top: 10px;
+      }
+   }
+
+   &__link {
+      font-size: 14px;
+      transition: all .3s;
+
+      &:hover {
+         color: $salad;
+      }
+	}
+	
+	&__label{
+		margin-top: 45px;
+		display: block;
+		position: relative;
+	}
+
+	&__input{
+		display: block;
+		margin-top: 10px;
+		background-color: transparent;
+		width: 213px;
+		height: 50px;
+		padding: 0 50px 0 20px;
+		border: 1px solid $border;
+		border-radius: 10px;
+		outline: transparent;
+		color: #fff;
+	}
+
+	&__btn{
+		background-color: $salad;
+		width: 40px;
+		height: 50px;
+		border-radius: 0 10px 10px 0;
+		position: absolute;
+		top: 24px;
+		right: 0;
+	}
+
+	&__contacts{
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+
+	&__info{
+		margin-left: 10px;
+		span{
+			display: block;
+			margin-bottom: 5px;
+			color: $text-grey;
+			font-size: 13px;
+		}
+	}
+
+	&__tel{
+		font-size: 24px;
+		font-family: "Roboto-Bold";
+	}
+
+	&__contact{
+		font-family: "Roboto-Bold";
+	}
+}
+
+.social-list{
+	margin-left: 50px;
+	&__line{
+		display: inline-block;
+		&+li{
+			margin-left: 10px;
+		}
+	}
+}
+
+
+
+/* -------------------------------------------Footer End*/
 @import "media";

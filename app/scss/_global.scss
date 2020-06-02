@@ -190,6 +190,9 @@ body {
 	font-family: "Roboto-Bold";
 	border-radius: 50px;
 	transition: all .4s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	&:hover {
 		background-color: $salad;

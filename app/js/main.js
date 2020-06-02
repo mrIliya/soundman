@@ -12,11 +12,27 @@ $(function () {
 
 	});
 
-	$('.tab-wrapper .tab').on('click', function (event) {
+	/* ----------------------------------------------------Goods Tabs */
+
+	$('.goods__inner .tab').on('click', function (event) {
 		var id = $(this).attr('data-id');
 
-		$('.tab-wrapper').find('.tab-content').removeClass('active-tab').hide();
-		$('.tab-wrapper .tabs').find('.tab').removeClass('active');
+		$('.goods__inner').find('.goods__content').removeClass('current-tab').hide();
+		$('.goods__inner ').find('.tab').removeClass('active');
+		$(this).addClass('active');
+
+		$('#' + id).addClass('current-tab').fadeIn();
+		return false;
+	});
+
+
+	/* ----------------------------------------------------Info Tabs */
+
+	$('.info__content .tab').on('click', function (event) {
+		var id = $(this).attr('data-id');
+
+		$('.info__content').find('.tab-content').removeClass('active-tab').hide();
+		$('.info__content ').find('.tab').removeClass('active');
 		$(this).addClass('active');
 
 		$('#' + id).addClass('active-tab').fadeIn();
