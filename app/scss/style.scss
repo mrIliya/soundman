@@ -1187,74 +1187,149 @@
       &:hover {
          color: $salad;
       }
-	}
-	
-	&__label{
-		margin-top: 45px;
-		display: block;
-		position: relative;
-	}
+   }
 
-	&__input{
-		display: block;
-		margin-top: 10px;
-		background-color: transparent;
-		width: 213px;
-		height: 50px;
-		padding: 0 50px 0 20px;
-		border: 1px solid $border;
-		border-radius: 10px;
-		outline: transparent;
-		color: #fff;
-	}
+   &__label {
+      margin-top: 45px;
+      display: block;
+      position: relative;
+   }
 
-	&__btn{
-		background-color: $salad;
-		width: 40px;
-		height: 50px;
-		border-radius: 0 10px 10px 0;
-		position: absolute;
-		top: 24px;
-		right: 0;
-	}
+   &__input {
+      display: block;
+      margin-top: 10px;
+      background-color: transparent;
+      width: 213px;
+      height: 50px;
+      padding: 0 50px 0 20px;
+      border: 1px solid $border;
+      border-radius: 10px;
+      outline: transparent;
+      color: #fff;
+   }
 
-	&__contacts{
-		display: flex;
-		align-items: center;
-		margin-bottom: 20px;
-	}
+   &__btn {
+      background-color: $salad;
+      width: 40px;
+      height: 50px;
+      border-radius: 0 10px 10px 0;
+      position: absolute;
+      top: 24px;
+      right: 0;
+   }
 
-	&__info{
-		margin-left: 10px;
-		span{
-			display: block;
-			margin-bottom: 5px;
-			color: $text-grey;
-			font-size: 13px;
-		}
-	}
+   &__contacts {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+   }
 
-	&__tel{
-		font-size: 24px;
-		font-family: "Roboto-Bold";
-	}
+   &__info {
+      margin-left: 10px;
 
-	&__contact{
-		font-family: "Roboto-Bold";
-	}
+      span {
+         display: block;
+         margin-bottom: 5px;
+         color: $text-grey;
+         font-size: 13px;
+      }
+   }
+
+   &__tel {
+      font-size: 24px;
+      font-family: "Roboto-Bold";
+   }
+
+   &__contact {
+      font-family: "Roboto-Bold";
+   }
 }
 
-.social-list{
-	margin-left: 50px;
-	&__line{
-		display: inline-block;
-		&+li{
-			margin-left: 10px;
-		}
-	}
+.social-list {
+   margin-left: 50px;
+
+   &__line {
+      display: inline-block;
+
+      &+li {
+         margin-left: 10px;
+      }
+   }
 }
-
-
 
 /* -------------------------------------------Footer End*/
+
+
+/* --********************************************************Product-card.html****************************************************-- */
+
+.product {
+   padding: 65px 0 75px 0;
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+   }
+}
+
+.product-slider__wrapper {
+   position: relative;
+}
+
+.product-slider {
+   max-width: 470px;
+   padding-bottom: 100px;
+
+   .owl-item {
+      padding: 8px;
+   }
+
+   &__item {
+      width: 100%;
+      min-height: 470px;
+      padding: 20px;
+      box-shadow: 0px 2px 10px rgba(140, 121, 199, 0.3);
+      border-radius: 10px;
+      border: 1px solid transparent;
+   }
+
+   &__image {
+      min-height: 370px;
+   }
+
+   &__preview,
+   .owl-dots {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+   }
+
+   &__dots {
+      background-color: transparent;
+      width: 78px;
+      height: 78px;
+
+      &+div {
+         margin-left: 20px;
+      }
+   }
+
+   &__prev {
+		padding: 13px;
+		box-shadow: 0px 2px 10px rgba(140, 121, 199, 0.3);
+      border-radius: 10px;
+      img {
+         width: 51px;
+         height: 51px;
+      }
+
+   }
+}
+
+
+
+
+/* --********************************************************Product-card.html****************************************************-- */
 @import "media";

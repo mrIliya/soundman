@@ -1,6 +1,10 @@
 html {
   box-sizing: border-box; }
 
+html,
+body {
+  height: 100%; }
+
 *,
 *::before,
 *::after {
@@ -34,6 +38,17 @@ body {
   padding: 0 15px;
   margin: 0 auto; }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; }
+
+.content {
+  flex: 1 0 auto; }
+
+.footer {
+  flex: 0 0 auto; }
+
 .title {
   font-size: 44px;
   font-family: "Roboto-Light";
@@ -65,9 +80,13 @@ body {
     padding: 4px 12px;
     border-radius: 50px;
     color: #474747;
-    font-size: 12px; }
+    font-size: 12px;
+    max-height: 23px;
+    max-width: 105px; }
     .product-item__instock img {
-      margin-right: 7px; }
+      margin-right: 7px;
+      flex: 0 0 auto;
+      max-width: 13px; }
   .product-item__icons {
     display: flex; }
     .product-item__icons a {
@@ -1666,3 +1685,50 @@ template {
       margin-left: 10px; }
 
 /* -------------------------------------------Footer End*/
+/* --********************************************************Product-card.html****************************************************-- */
+.product {
+  padding: 65px 0 75px 0; }
+  .product__inner {
+    display: flex;
+    justify-content: space-between; }
+
+.product-slider__wrapper {
+  position: relative; }
+
+.product-slider {
+  max-width: 470px;
+  padding-bottom: 100px; }
+  .product-slider .owl-item {
+    padding: 8px; }
+  .product-slider__item {
+    width: 100%;
+    min-height: 470px;
+    padding: 20px;
+    box-shadow: 0px 2px 10px rgba(140, 121, 199, 0.3);
+    border-radius: 10px;
+    border: 1px solid transparent; }
+  .product-slider__image {
+    min-height: 370px; }
+  .product-slider__preview,
+  .product-slider .owl-dots {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+  .product-slider__dots {
+    background-color: transparent;
+    width: 78px;
+    height: 78px; }
+    .product-slider__dots + div {
+      margin-left: 20px; }
+  .product-slider__prev {
+    padding: 13px;
+    box-shadow: 0px 2px 10px rgba(140, 121, 199, 0.3);
+    border-radius: 10px; }
+    .product-slider__prev img {
+      width: 51px;
+      height: 51px; }
+
+/* --********************************************************Product-card.html****************************************************-- */

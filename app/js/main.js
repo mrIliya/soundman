@@ -1,6 +1,6 @@
 $(function () {
 
-	$(".owl-carousel").owlCarousel({
+	$(".slider").owlCarousel({
 
 		items: 1,
 		dots: true,
@@ -11,6 +11,19 @@ $(function () {
 		loop: true
 
 	});
+
+	$(".product-slider").owlCarousel({
+
+		items: 1,
+		dots: true,
+		lazyLoad: true,
+		smartSpeed: 1000,
+		loop: true,
+		dotClass: 'product-slider__dots',
+		animateOut: 'fadeOut'
+
+	});
+
 
 	/* ----------------------------------------------------Goods Tabs */
 
