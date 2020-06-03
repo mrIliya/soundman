@@ -5,8 +5,8 @@ html {
 }
 
 html,
-body{
-	height: 100%;
+body {
+   height: 100%;
 }
 
 *,
@@ -50,16 +50,17 @@ body {
 }
 
 .wrapper {
-	display: flex;
-	flex-direction: column;
-	min-height: 100%;
-}
-.content {
-	flex: 1 0 auto;
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
 }
 
-.footer{
-	flex: 0 0 auto;
+.content {
+   flex: 1 0 auto;
+}
+
+.footer {
+   flex: 0 0 auto;
 }
 
 .title {
@@ -99,14 +100,14 @@ body {
       padding: 4px 12px;
       border-radius: 50px;
       color: $nav;
-		font-size: 12px;
-		max-height: 23px;
-		max-width: 105px;
+      font-size: 12px;
+      max-height: 23px;
+      max-width: 105px;
 
       img {
-			margin-right: 7px;
-			flex: 0 0 auto;
-			max-width: 13px;
+         margin-right: 7px;
+         flex: 0 0 auto;
+         max-width: 13px;
       }
    }
 
@@ -137,86 +138,119 @@ body {
       color: $text-dark;
       font-family: "Roboto-Medium";
       line-height: 20px;
-		margin-bottom: 10px;
-		display: block;
+      margin-bottom: 10px;
+      display: block;
    }
 
-	&__bottom{
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 20px;
-	}
+   &__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+   }
 
-	&__price{
-		font-size: 26px;
-		font-family: "Roboto-Bold";
-		color: $price;
-	}
+   &__price {
+      font-size: 26px;
+      font-family: "Roboto-Bold";
+      color: $price;
+   }
 
-	&__buttons{
-		display: flex;
-		justify-content: space-between;
-	}
+   &__buttons {
+      display: flex;
+      justify-content: space-between;
+   }
 
-	&__btn{
-		padding: 12px 15px;
-		border-radius: 50px;
-		border: 1px solid $border;
-		font-size: 14px;
-		color: $text-dark;
-		transition: all .3s;
-		&.active,
-		&:hover{
-			color: #fff;
-			background-color: $main-bg;
-			font-family: "Roboto-Bold";
-			box-shadow: 0px 8px 30px rgba(55, 113, 155, .5);
-		}
-	}
+   &__btn {
+      padding: 12px 15px;
+      border-radius: 50px;
+      border: 1px solid $border;
+      font-size: 14px;
+      color: $text-dark;
+      transition: all .4s;
 
-	&:hover {
+      &.active,
+      &:hover {
+         color: #fff;
+         background-color: $main-bg;
+         font-family: "Roboto-Bold";
+         box-shadow: 0px 8px 30px rgba(55, 113, 155, .5);
+      }
+   }
+
+   &:hover {
       box-shadow: 0px 2px 20px rgba(139, 116, 206, 0.3);
-		border: 1px solid $grey;
-		transform: translate(3px, -3px);
-	}
-	
+      border: 1px solid $grey;
+      transform: translate(3px, -3px);
+   }
+
 }
 
 .rating {
-	display: flex;
-	z-index: 100;
+   display: flex;
+   z-index: 100;
 
    &__item {
 
       &+div {
          margin-left: 3px;
-		}
-	}
-	
-	&__image{
-		&.active{
-			fill: #ffc107;
-		}
-		
-	}
+      }
+   }
+
+   &__image {
+      &.active {
+         fill: #ffc107;
+      }
+
+   }
+
+   .rating__number {
+      font-size: 14px;
+		font-family: "Roboto-Medium";
+		margin-left: 10px;
+   }
 }
 
 .button {
-	display: block;
-	max-width: 337px;
-	padding: 25px 30px;
-	background-color: rgba(151, 213, 19, .5);
-	color: #fff;
-	font-size: 18px;
-	font-family: "Roboto-Bold";
-	border-radius: 50px;
-	transition: all .4s;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+   display: block;
+   max-width: 337px;
+   padding: 25px 30px;
+   background-color: rgba(151, 213, 19, .5);
+   color: #fff;
+   font-size: 18px;
+   font-family: "Roboto-Bold";
+   border-radius: 50px;
+   transition: all .4s;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 
-	&:hover {
-		background-color: $salad;
-	}
+   &:hover {
+      background-color: $salad;
+   }
+}
+
+.breadcrumbs {
+   &__line {
+      display: inline-block;
+      padding: 10px 0;
+      position: relative;
+
+      &+li {
+         padding-left: 10px;
+
+         &::before {
+            content: '/';
+            color: $crumbs;
+            position: absolute;
+            top: 10px;
+            left: 0;
+         }
+      }
+   }
+
+   &__link {
+      font-size: 12px;
+      line-height: 14px;
+      color: $crumbs;
+   }
 }
