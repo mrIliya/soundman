@@ -42,10 +42,23 @@ $(function () {
 	/* ----------------------------------------------------Info Tabs */
 
 	$('.info__content .tab').on('click', function (event) {
-		var id = $(this).attr('data-id');
+		var id = $(this).attr('data-tab');
 
-		$('.info__content').find('.tab-content').removeClass('active-tab').hide();
+		$('.info__content').find('.info-item').removeClass('active-tab').hide();
 		$('.info__content ').find('.tab').removeClass('active');
+		$(this).addClass('active');
+
+		$('#' + id).addClass('active-tab').fadeIn();
+		return false;
+	});
+
+	/* ----------------------------------------------------Product-card Tabs */
+
+	$('.descr__inner .descr__tab').on('click', function (event) {
+		var id = $(this).attr('data-name');
+
+		$('.descr__inner').find('.descr__item').removeClass('active-tab').hide();
+		$('.descr__inner .descr__tabs').find('.descr__tab').removeClass('active');
 		$(this).addClass('active');
 
 		$('#' + id).addClass('active-tab').fadeIn();
@@ -54,43 +67,44 @@ $(function () {
 
 	/* ----------------------------------------------------Input Number */
 
-	window.inputNumber = function(el) {
+	window.inputNumber = function (el) {
 
 		var min = el.attr('min') || false;
 		var max = el.attr('max') || false;
-  
+
 		var els = {};
-  
+
 		els.dec = el.prev();
 		els.inc = el.next();
-  
-		el.each(function() {
-		  init($(this));
+
+		el.each(function () {
+			init($(this));
 		});
-  
+
 		function init(el) {
-  
-		  els.dec.on('click', decrement);
-		  els.inc.on('click', increment);
-  
-		  function decrement() {
-			 var value = el[0].value;
-			 value--;
-			 if(!min || value >= min) {
-				el[0].value = value;
-			 }
-		  }
-  
-		  function increment() {
-			 var value = el[0].value;
-			 value++;
-			 if(!max || value <= max) {
-				el[0].value = value++;
-			 }
-		  }
+
+			els.dec.on('click', decrement);
+			els.inc.on('click', increment);
+
+			function decrement() {
+				var value = el[0].value;
+				value--;
+				if (!min || value >= min) {
+					el[0].value = value;
+				}
+			}
+
+			function increment() {
+				var value = el[0].value;
+				value++;
+				if (!max || value <= max) {
+					el[0].value = value++;
+				}
+			}
 		}
 	}
 
 	inputNumber($('.input-number'));
 
 });
+

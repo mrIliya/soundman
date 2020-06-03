@@ -1263,13 +1263,13 @@
 /* --********************************************************Product-card.html****************************************************-- */
 
 .product {
-	padding: 65px 0 0 0;
+   padding: 65px 0 0 0;
 
    &__inner {
       display: flex;
-		justify-content: space-between;
-		border-bottom: 1px solid $border;
-		padding-bottom: 75px;
+      justify-content: space-between;
+      border-bottom: 1px solid $border;
+      padding-bottom: 75px;
    }
 }
 
@@ -1414,11 +1414,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-		cursor: pointer;
-		
-		img{
-			user-select: none;
-		}
+      cursor: pointer;
+
+      img {
+         user-select: none;
+      }
 
    }
 
@@ -1535,11 +1535,11 @@
 
       .heart {
          margin-right: 0;
-		}
-		
-		.weight{
-			margin-left: auto;
-		}
+      }
+
+      .weight {
+         margin-left: auto;
+      }
    }
 
    &__left {
@@ -1575,8 +1575,8 @@
    &__payment,
    &__advantage {
       border: 1px solid $border;
-		padding: 25px;
-		border-radius: 10px 10px 0 0;
+      padding: 25px;
+      border-radius: 10px 10px 0 0;
    }
 
    &__title {
@@ -1602,7 +1602,8 @@
    }
 
    &__payment {
-		border-radius: 0;
+      border-radius: 0;
+
       li {
          &::before {
             content: url(../images/product-about-2.png);
@@ -1611,7 +1612,8 @@
    }
 
    &__advantage {
-		border-radius: 0 0 10px 10px;
+      border-radius: 0 0 10px 10px;
+
       li {
          &::before {
             content: url(../images/product-about-3.png);
@@ -1625,22 +1627,122 @@
 
 /* -------------------------------------------Descr Start*/
 
-.descr{
-	padding: 65px 0 100px 0;
+.descr {
+   padding: 65px 0 50px 0;
+   position: relative;
 
-	&__tabs{
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	&__tab{
-		width: 33.333%;
-		text-align: center;
-		font-size: 18px;
-		&.active{
-			font-size: 24px;
+   &__inner {
+      position: relative;
+      min-height: 545px;
+   }
+
+   &__tabs {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      top: 0px;
+      max-width: 1170px;
+      width: 100%;
+
+   }
+
+   &__tab {
+      width: 32%;
+      text-align: center;
+      font-size: 18px;
+      border-radius: 10px 10px 0 0;
+      padding: 32px;
+      background-color: $search-bg;
+      color: #c2c2c2;
+      max-height: 55px;
+      transition: all .2s;
+      cursor: pointer;
+      border: 1px solid $border;
+      border-bottom: none;
+      position: relative;
+		margin-top: 20px;
+		z-index: 1;
+
+      &::before {
+         content: '';
+         height: 15px;
+         width: 100%;
+         position: absolute;
+         left: 0;
+         bottom: -12px;
+         background-color: #fff;
+			display: none;
+			z-index: 3;
+      }
+
+      &.active {
+         font-size: 24px;
+         font-family: "Roboto-Medium";
+         background-color: #fff;
+         color: $menu;
+         min-height: 81px;
+         box-shadow: 0px 2px 10px rgba(140, 121, 199, 0.3);
+         border: none;
+         z-index: 6;
+			margin: 0;
+			padding: 40px;
+
+         &::before {
+            display: block;
+			}
+			
+			&:first-child{
+				margin: 0;
+			}
+	
+			&:last-child{
+				margin: 0;
+			}
 		}
-	}
+		
+		&:first-child{
+			margin-left: 15px;
+		}
+
+		&:last-child{
+			margin-right: 15px;
+		}
+   }
+
+   &__item {
+      border-radius: 10px;
+      display: none;
+      padding: 75px 0 32px 75px;
+		font-size: 18px;
+		line-height: 24px;
+      font-family: "Roboto-Medium";
+      color: $nav;
+      box-shadow: 0px 2px 10px rgba(140, 121, 199, 0.3);
+      z-index: 3;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+		height: 460px;
+		overflow: hidden;
+
+      p {
+         width: 50%;
+
+         &+p {
+            margin-top: 20px;
+         }
+
+         &:first-child {
+            font-family: "Roboto-Bold";
+         }
+      }
+
+      &.active-tab {
+         display: block;
+      }
+   }
 }
 
 /* -------------------------------------------Descr End*/
