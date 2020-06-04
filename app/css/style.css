@@ -2033,4 +2033,67 @@ template {
       display: block; }
 
 /* -------------------------------------------Descr End*/
+/* -------------------------------------------Interested Start*/
+.interested {
+  padding: 40px 0 100px 0; }
+  .interested__title {
+    margin-bottom: 47px;
+    font-size: 30px;
+    font-family: "Roboto-Bold"; }
+  .interested__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+
+/* -------------------------------------------Interested End/
+
 /* --********************************************************Product-card.html****************************************************-- */
+/* --********************************************************Catalog.html****************************************************-- */
+.catalog {
+  padding: 60px 0 100px 0; }
+  .catalog__inner {
+    display: flex; }
+
+.catalog-content {
+  max-width: 873px;
+  width: 100%; }
+  .catalog-content__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0 30px 0; }
+  .catalog-content__title {
+    font-size: 36px;
+    font-family: "Roboto-Bold";
+    color: #313131; }
+  .catalog-content__filter {
+    position: relative;
+    display: block; }
+    .catalog-content__filter::after {
+      content: url(../images/chevron-down.svg);
+      position: absolute;
+      top: 13px;
+      right: 20px;
+      z-index: -1; }
+  .catalog-content__select {
+    height: 38px;
+    min-width: 270px;
+    flex: 0 0 auto;
+    padding: 10px 50px 10px 20px;
+    font-size: 16px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    outline: transparent;
+    background-color: transparent;
+    cursor: pointer; }
+  .catalog-content select {
+    appearance: none;
+    -webkit-appearance: none; }
+  .catalog-content__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .catalog-content__item {
+    margin-bottom: 30px; }
+
+/* --********************************************************Catalog.html****************************************************-- */
