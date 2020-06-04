@@ -27,7 +27,7 @@ $(function () {
 
 	/* ----------------------------------------------------Goods Tabs */
 
-	$('.goods__inner .tab').on('click', function (event) {
+	$('.goods__inner .tab').on('click', function (e) {
 		let id = $(this).attr('data-id');
 
 		$('.goods__inner').find('.goods__content').removeClass('current-tab').hide();
@@ -39,7 +39,7 @@ $(function () {
 	})
 	/* ----------------------------------------------------Info Tabs */
 
-	$('.info__content .tab').on('click', function (event) {
+	$('.info__content .tab').on('click', function (e) {
 		let id = $(this).attr('data-tab');
 
 		$('.info__content').find('.info-item').removeClass('active-tab').hide();
@@ -52,7 +52,7 @@ $(function () {
 
 	/* ----------------------------------------------------Product-card Tabs */
 
-	$('.descr__inner .descr__tab').on('click', function (event) {
+	$('.descr__inner .descr__tab').on('click', function (e) {
 		let id = $(this).attr('data-name');
 
 		$('.descr__inner').find('.descr__item').removeClass('active-tab').hide();
@@ -103,6 +103,63 @@ $(function () {
 	}
 
 	inputNumber($('.input-number'));
+
+	/* ----------------------------------------------------aside-type */
+
+	$('.catalog-aside__item .catalog-aside__type').on('click', function (e) {
+		e.preventDefault();
+
+		$(this).toggleClass('active');
+		
+	});
+
+
+	/* ----------------------------------------------------Rangeslider */
+
+	let $range = $(".js-range-slider"),
+		$inputFrom = $(".js-input-from"),
+		$inputTo = $(".js-input-to"),
+		instance,
+		min = 0,
+		from = 0,
+		to = 0;
+
+	$range.ionRangeSlider({
+		type: "double",
+		show_min_max: false,
+		show_from_to: false,
+		min: 0,
+		max: 11000,
+		from: 500,
+		to: 11000,
+		grid: false,
+		onStart: updateInputs,
+		onChange: updateInputs
+	});
+	instance = $range.data("ionRangeSlider");
+
+	function updateInputs(data) {
+		from = data.from;
+		to = data.to;
+
+		$inputFrom.prop("value", from);
+		$inputTo.prop("value", to);
+	}
+
+	$inputFrom.on("input", function () {
+		let val = $(this).prop("value");
+
+		// validate
+		if (val < min) {
+			val = min;
+		} else if (val > to) {
+			val = to;
+		}
+
+		instance.update({
+			from: val
+		});
+	});
 
 });
 
