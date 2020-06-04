@@ -1842,6 +1842,33 @@
 
 }
 
+.pagination{
+	text-align: center;
+	margin-top: 45px;
+	&__line{
+		display: inline-block;
+		&+li{
+			margin-left: 10px;
+		}
+	}
+
+	&__link{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 35px;
+		height: 35px;
+		border: 1px solid $border;
+		border-radius: 8px;
+		font-size: 17px;
+		color: $title;
+		&.active,
+		&:hover{
+			background-color: $main-bg;
+			color: #fff;
+		}
+	}
+}
 
 
 

@@ -28,7 +28,7 @@ $(function () {
 	/* ----------------------------------------------------Goods Tabs */
 
 	$('.goods__inner .tab').on('click', function (event) {
-		var id = $(this).attr('data-id');
+		let id = $(this).attr('data-id');
 
 		$('.goods__inner').find('.goods__content').removeClass('current-tab').hide();
 		$('.goods__inner ').find('.tab').removeClass('active');
@@ -36,13 +36,11 @@ $(function () {
 
 		$('#' + id).addClass('current-tab').fadeIn();
 		return false;
-	});
-
-
+	})
 	/* ----------------------------------------------------Info Tabs */
 
 	$('.info__content .tab').on('click', function (event) {
-		var id = $(this).attr('data-tab');
+		let id = $(this).attr('data-tab');
 
 		$('.info__content').find('.info-item').removeClass('active-tab').hide();
 		$('.info__content ').find('.tab').removeClass('active');
@@ -55,7 +53,7 @@ $(function () {
 	/* ----------------------------------------------------Product-card Tabs */
 
 	$('.descr__inner .descr__tab').on('click', function (event) {
-		var id = $(this).attr('data-name');
+		let id = $(this).attr('data-name');
 
 		$('.descr__inner').find('.descr__item').removeClass('active-tab').hide();
 		$('.descr__inner .descr__tabs').find('.descr__tab').removeClass('active');
@@ -69,10 +67,10 @@ $(function () {
 
 	window.inputNumber = function (el) {
 
-		var min = el.attr('min') || false;
-		var max = el.attr('max') || false;
+		let min = el.attr('min') || false;
+		let max = el.attr('max') || false;
 
-		var els = {};
+		let els = {};
 
 		els.dec = el.prev();
 		els.inc = el.next();
@@ -87,7 +85,7 @@ $(function () {
 			els.inc.on('click', increment);
 
 			function decrement() {
-				var value = el[0].value;
+				let value = el[0].value;
 				value--;
 				if (!min || value >= min) {
 					el[0].value = value;
@@ -95,7 +93,7 @@ $(function () {
 			}
 
 			function increment() {
-				var value = el[0].value;
+				let value = el[0].value;
 				value++;
 				if (!max || value <= max) {
 					el[0].value = value++;
