@@ -62,7 +62,8 @@
 								<input class="header-main__input" type="text" placeholder="Поиск товара">
 							</div>
 							<div class="header-main__notify">
-								<a class="header-main__notification main-icon weight" href="#" class="header-main__notification main-icon weight">
+								<a class="header-main__notification main-icon weight" href="#"
+									class="header-main__notification main-icon weight">
 									<svg width="25" height="22" viewBox="0 0 25 22" fill="none"
 										xmlns="http://www.w3.org/2000/svg">
 										<path
@@ -70,7 +71,8 @@
 											fill="#251C41" />
 									</svg>
 								</a>
-								<a class="header-main__notification main-icon heart" href="#" class="header-main__notification main-icon heart">
+								<a class="header-main__notification main-icon heart" href="#"
+									class="header-main__notification main-icon heart">
 									<svg width="24" height="22" viewBox="0 0 24 22" fill="none"
 										xmlns="http://www.w3.org/2000/svg">
 										<path
@@ -78,7 +80,8 @@
 											fill="#251C41" />
 									</svg>
 								</a>
-								<a class="header-main__notification main-icon cart" href="cart.html" class="header-main__notification main-icon cart">
+								<a class="header-main__notification main-icon cart" href="cart.html"
+									class="header-main__notification main-icon cart">
 									<svg width="27" height="27" viewBox="0 0 27 27" fill="none"
 										xmlns="http://www.w3.org/2000/svg">
 										<path
@@ -157,105 +160,75 @@
 			</header>
 
 
-		<section class="purchased">
-			<div class="container">
-				<div class="breadcrumbs">
-					<ul class="breadcrumbs__list">
-						<li class="breadcrumbs__line">
-							<a class="breadcrumbs__link" href="index.html">Главная</a>
-						</li>
-						<li class="breadcrumbs__line">
-							<span class="breadcrumbs__link">Корзина</span>
-						</li>
-					</ul>
+			<section class="checkout">
+				<div class="container">
+					<div class="breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__line">
+								<a class="breadcrumbs__link" href="index.html">Главная</a>
+							</li>
+							<li class="breadcrumbs__line">
+								<a class="breadcrumbs__link" href="cart.html">Корзина</a>
+							</li>
+							<li class="breadcrumbs__line">
+								<span class="breadcrumbs__link">Оформление заказа</span>
+							</li>
+						</ul>
+					</div>
+					<div class="checkout__title title-fluid">Оформите заказ</div>
+					<div class="checkout__inner">
+						<div class="checkout-item">
+							<div class="checkout-item__title"><span>01</span> Личные данные</div>
+							<form class="checkout-item__form" action="">
+								<input type="name" class="checkout-item__input main__input" placeholder="Имя">
+								<input type="email" class="checkout-item__input main__input" placeholder="E-mail">
+								<input type="tel" class="checkout-item__input main__input" placeholder="Телефон">
+								<input type="text" class="checkout-item__input main__input" placeholder="Город">
+								<textarea class="checkout-item__textarea" name="" id="" cols="30" rows="10" placeholder="Комментарий к заказу"></textarea>
+							</form>
+						</div>
+						<div class="checkout-item">
+							<div class="checkout-item__title"><span>02</span> Доставка</div>
+							<div class="checkout-item__check catalog-aside__check">
+								<input class="checkout-item__input-check catalog-aside__input" type="checkbox">
+								<label class="checkout-item__label catalog-aside__label" for="">Доставка по городу</label>
+							</div>
+							<div class="checkout-item__check catalog-aside__check">
+								<input class="checkout-item__input-check catalog-aside__input" type="checkbox">
+								<label class="checkout-item__label catalog-aside__label" for="">Доставка по области</label>
+							</div>
+							<div class="checkout-item__check catalog-aside__check">
+								<input class="checkout-item__input-check catalog-aside__input" type="checkbox">
+								<label class="checkout-item__label catalog-aside__label" for="">Доставка по Украине</label>
+							</div>
+							<div class="checkout-item__check catalog-aside__check">
+								<input class="checkout-item__input-check catalog-aside__input" type="checkbox">
+								<label class="checkout-item__label catalog-aside__label" for="">Самовывоз</label>
+							</div>							
+								<textarea class="checkout-item__textarea" name="" id="" cols="30" rows="10" placeholder="Адрес доставки"></textarea>
+						</div>
+						<div class="checkout-item">
+							<div class="checkout-item__title"><span>03</span> Оплата</div>
+							<div class="checkout-item__check catalog-aside__check">
+								<input class="checkout-item__input-check catalog-aside__input" type="checkbox">
+								<label class="checkout-item__label catalog-aside__label" for="">Оплата наличными</label>
+							</div>
+							<div class="checkout-item__check catalog-aside__check">
+								<input class="checkout-item__input-check catalog-aside__input" type="checkbox">
+								<label class="checkout-item__label catalog-aside__label" for="">Оплата банковской картой</label>
+							</div>
+							<div class="checkout-item__total">
+								<ul class="checkout-item__list">
+									<li class="checkout-item__line">Сумма заказа:<span>15 600 ₽</span></li>
+									<li class="checkout-item__line">Сумма доставки:<span>0₽</span></li>
+									<li class="checkout-item__line">Итого:<span>15 600 ₽</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<a class="purchased__button button" href="checkout.html"><span>Оформить заказ</span></a>
 				</div>
-				<div class="purchased__title title-fluid">Корзина</div>
-				<div class="purchased__content">
-					<ul class="purchased__list">
-						<li class="purchased__type">Название товара:</li>
-						<li class="purchased__type">Цена за штуку:</li>
-						<li class="purchased__type">Количество:</li>
-						<li class="purchased__type">Сумма:</li>
-					</ul>
-					<div class="purchased-item">
-						<a class="purchased-item__image" href="product-card.html" style="background-image: url(images/best-3.png);"></a>
-						<a class="purchased-item__name" href="product-card.html">Наушники Bluetooth Baseus Encok D01 NGD01-09 (red)</a>
-						<div class="purchased-item__price">1500₴</div>
-						<div class="purchased-item__select product-info__select">
-							<span class="input-number__decrement">
-								<img src="images/chevron-left.png" alt="">
-							</span>
-							<input class="input-number" type="text" value="1" min="1" max="10">
-							<span class="input-number__increment">
-								<img src="images/chevron-right.png" alt="">
-							</span>
-						</div>
-						<div class="purchased-item__amount">1500₴</div>
-						<button class="purchased-item__btn" type="button">x</button>
-					</div>
-					<div class="purchased-item">
-						<a class="purchased-item__image" href="product-card.html" style="background-image: url(images/product-9.png);"></a>
-						<a class="purchased-item__name" href="product-card.html">Наушники Bluetooth Baseus Encok D01 NGD01-09 (red)</a>
-						<div class="purchased-item__price">1500₴</div>
-						<div class="purchased-item__select product-info__select">
-							<span class="input-number__decrement">
-								<img src="images/chevron-left.png" alt="">
-							</span>
-							<input class="input-number" type="text" value="1" min="1" max="10">
-							<span class="input-number__increment">
-								<img src="images/chevron-right.png" alt="">
-							</span>
-						</div>
-						<div class="purchased-item__amount">1500₴</div>
-						<button class="purchased-item__btn" type="button">x</button>
-					</div>
-					<div class="purchased-item">
-						<a class="purchased-item__image" href="product-card.html" style="background-image: url(images/product-7.png);"></a>
-						<a class="purchased-item__name" href="product-card.html">Наушники Bluetooth Baseus Encok D01 NGD01-09 (red)</a>
-						<div class="purchased-item__price">1500₴</div>
-						<div class="purchased-item__select product-info__select">
-							<span class="input-number__decrement">
-								<img src="images/chevron-left.png" alt="">
-							</span>
-							<input class="input-number" type="text" value="1" min="1" max="10">
-							<span class="input-number__increment">
-								<img src="images/chevron-right.png" alt="">
-							</span>
-						</div>
-						<div class="purchased-item__amount">1500₴</div>
-						<button class="purchased-item__btn" type="button">x</button>
-					</div>
-					<div class="purchased-item">
-						<a class="purchased-item__image" href="product-card.html" style="background-image: url(images/product-5.png);"></a>
-						<a class="purchased-item__name" href="product-card.html">Наушники Bluetooth Baseus Encok D01 NGD01-09 (red)</a>
-						<div class="purchased-item__price">1500₴</div>
-						<div class="purchased-item__select product-info__select">
-							<span class="input-number__decrement">
-								<img src="images/chevron-left.png" alt="">
-							</span>
-							<input class="input-number" type="text" value="1" min="1" max="10">
-							<span class="input-number__increment">
-								<img src="images/chevron-right.png" alt="">
-							</span>
-						</div>
-						<div class="purchased-item__amount">1500₴</div>
-						<button class="purchased-item__btn" type="button">x</button>
-					</div>
-				</div>
-				<div class="purchased-footer">
-					<div class="purchased-footer__form">
-						<label class="purchased-footer__label" for="">Введите Ваш Промокод на покупку:</label>
-						<input class="purchased-footer__input main__input" type="text" placeholder="Введите код">
-						<button class="purchased-footer__btn" type="submit">Активировать</button>
-					</div>
-					<div class="purchased-footer__amount">
-						Сумма заказа:
-						<span>5 000₴</span>
-					</div>
-				</div>
-				<a class="purchased__button button" href="checkout.html"><span>Оформить заказ</span></a>
-			</div>
-		</section>
+			</section>
 
 		</div>
 		<footer class="footer">
