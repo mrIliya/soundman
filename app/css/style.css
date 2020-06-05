@@ -3165,3 +3165,80 @@ Build date: 2019-12-19 16:51:02
       margin-top: 40px; }
 
 /* --********************************************************Checkout.html****************************************************-- */
+/* --********************************************************Guarantee.html****************************************************-- */
+.guarantee {
+  padding: 60px 0 70px 0; }
+  .guarantee__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 70px; }
+
+.guarantee-item {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+  max-width: 370px;
+  width: 100%;
+  padding: 50px 20px 30px 20px; }
+  .guarantee-item__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    font-size: 18px;
+    font-family: "Roboto-Bold";
+    color: #313131; }
+    .guarantee-item__title span {
+      max-width: 175px; }
+    .guarantee-item__title img {
+      width: 59px;
+      height: 59px;
+      flex: 0 0 auto;
+      margin-right: 20px; }
+  .guarantee-item__text {
+    font-size: 14px;
+    color: #535353;
+    line-height: 20px; }
+    .guarantee-item__text p {
+      margin-top: 20px; }
+
+.guarantee-content__title {
+  font-size: 24px;
+  color: #313131;
+  margin-bottom: 30px; }
+
+.guarantee-content__items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.guarantee-content__item {
+  max-width: 270px;
+  padding: 15px 0 30px 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 9px; }
+
+.guarantee-content__top {
+  padding: 0 20px 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d9d9d9; }
+  .guarantee-content__top span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.09);
+    width: 54px;
+    height: 54px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    color: #37719b;
+    font-size: 20px;
+    font-family: "Roboto-Bold"; }
+
+.guarantee-content__text {
+  padding: 20px;
+  font-size: 14px;
+  color: #535353;
+  line-height: 20px; }
+
+/* --********************************************************Guarantee.html****************************************************-- */
