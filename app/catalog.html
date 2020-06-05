@@ -78,7 +78,7 @@
 											fill="#251C41" />
 									</svg>
 								</a>
-								<a href="#" class="header-main__notification main-icon cart">
+								<a class="header-main__notification main-icon cart" href="cart.html">
 									<svg width="27" height="27" viewBox="0 0 27 27" fill="none"
 										xmlns="http://www.w3.org/2000/svg">
 										<path
@@ -241,16 +241,14 @@
 								</div>
 								<div class="catalog-aside__item">
 									<div class="catalog-aside__type">Цена:</div>
-									<div class="catalog-aside__content">
-										<div class="price__range">
-											<input class="js-range-slider" type="text" name="my_range" value="">
-											<div class="extra-controls">
-												<div class="extra-controls__input">
-													<input class="js-input-from" type="text" value="0" />
-												</div>
-												<div class="extra-controls__input">
-													<input class="js-input-to" type="text" value="0" />
-												</div>
+									<div class="catalog-aside__content price__range">
+										<input class="js-range-slider" type="text" name="my_range" value="">
+										<div class="extra-controls">
+											<div class="extra-controls__input">
+												<input class="js-input-from" type="text" value="0" />
+											</div>
+											<div class="extra-controls__input">
+												<input class="js-input-to" type="text" value="0" />
 											</div>
 										</div>
 									</div>
@@ -270,7 +268,7 @@
 											<input class="catalog-aside__input" type="checkbox">
 											<label class="catalog-aside__label" for="">Распродажа</label>
 										</div>
-										<button class="catalog-aside__btn" type="button">Очистить фильтр</button>
+										<button class="catalog-aside__btn" type="button"><span>Очистить фильтр</span></button>
 									</div>
 								</div>
 							</div>
@@ -1327,22 +1325,46 @@
 				</div>
 			</section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+			<section class="info">
+				<div class="container">
+					<div class="info__title title">Что стоит знать
+						<span>при выборе наушников</span>
+					</div>
+					<div class="info__content">
+						<div class="info__buttons">
+							<div class="info__btn tab active" data-tab="tab1"><span>Есть ли гарантия?</span> </div>
+							<div class="info__btn tab" data-tab="tab2"><span>Сколько устройств можно подключить?</span> </div>
+							<div class="info__btn tab" data-tab="tab3"><span>Какой провод использовать?</span> </div>
+							<div class="info__btn tab" data-tab="tab3"><span>Сколько устройств можно подключить?</span> </div>
+						</div>
+						<div class="info-item active-tab" id="tab1">
+							<div class="info-item__title">Гарантия на всю продукцию 3 месяца</div>
+							<div class="info-item__text">При покупке наушников важно понимать, что любой ваш выбор в каком-то
+								отношении будет компромиссом. Лишь правильные приоритеты позволят найти оптимальное решение,
+								удовлетворяющее главным требованиям. Условно можно выделить три критерия, от которых и придётся
+								отталкиваться. Речь о доступности, портативности и, конечно, качестве звука.
+							</div>
+							<a class="info-item__link" href="#">Перейти в блог</a>
+						</div>
+						<div class="info-item" id="tab2">
+							<div class="info-item__title">Возможность подключения нескольких устройств</div>
+							<div class="info-item__text">Наушники, как и любой гаджет, покупаются под определённые задачи и цели.
+								Необходимо понимать, когда и как вы будете их использовать. От сценариев использования зависит выбор
+								вида наушников.
+							</div>
+							<a class="info-item__link" href="#">Перейти в блог</a>
+						</div>
+						<div class="info-item" id="tab3">
+							<div class="info-item__title">Лучшие гарнитуры и аксессуары</div>
+							<div class="info-item__text">Для использования на работе и дома обычно покупаются полноразмерные
+								гарнитуры, которые обеспечивают полный охват ушной раковины и максимально комфортную посадку на
+								голове. Такой тип как нельзя лучше располагает к длительному прослушиванию музыки.
+							</div>
+							<a class="info-item__link" href="#">Перейти в блог</a>
+						</div>
+					</div>
+				</div>
+			</section>
 
 		</div>
 		<footer class="footer">

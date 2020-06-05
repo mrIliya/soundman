@@ -106,10 +106,10 @@ $(function () {
 
 	/* ----------------------------------------------------aside-type */
 
-	$('.catalog-aside__item .catalog-aside__type').on('click', function (e) {
+	$('.catalog-aside__type').on('click', function (e) {
 		e.preventDefault();
-
 		$(this).toggleClass('active');
+		$('.catalog-aside__brend').toggleClass('show');
 		
 	});
 
@@ -130,7 +130,7 @@ $(function () {
 		show_from_to: false,
 		min: 0,
 		max: 11000,
-		from: 500,
+		from: 0,
 		to: 11000,
 		grid: false,
 		onStart: updateInputs,
