@@ -1614,7 +1614,10 @@ Build date: 2019-12-19 16:51:02
 
 .header-menu {
   border: 2px solid #e7e7e7;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12); }
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12);
+  border-left: none;
+  border-right: none;
+  position: relative; }
   .header-menu__inner {
     display: flex;
     justify-content: space-between;
@@ -1657,7 +1660,79 @@ Build date: 2019-12-19 16:51:02
     font-family: "Roboto-Medium"; }
 
 .menu-desktop {
-  display: none; }
+  position: absolute;
+  top: 0px;
+  left: -100%;
+  z-index: -1;
+  opacity: 0;
+  background-color: #fff;
+  box-shadow: 0px 20px 22px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 8px 8px;
+  width: 100%;
+  text-align: center;
+  transition: all .5s; }
+  .menu-desktop.active {
+    left: 0;
+    opacity: 1;
+    z-index: 100000000; }
+  .menu-desktop li {
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 26px;
+    border-bottom: 1px solid #d9d9d9; }
+  .menu-desktop__line img {
+    display: none; }
+  .menu-desktop span {
+    font-size: 18px;
+    color: #313131;
+    font-family: "Roboto-Bold";
+    margin-left: 20px; }
+  .menu-desktop__link, .menu-desktop__sublink {
+    width: 100%;
+    display: block;
+    padding: 10px 0;
+    color: #404040;
+    font-size: 12px;
+    margin-left: 20px; }
+  .menu-desktop__link {
+    font-size: 14px;
+    color: #474747;
+    font-family: "Roboto-Medium"; }
+  .menu-desktop__btn {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translate(-50%, 0);
+    z-index: 100000010;
+    width: 30px;
+    height: 4px;
+    background-color: #251C41; }
+    .menu-desktop__btn:before, .menu-desktop__btn:after {
+      content: '';
+      width: 30px;
+      height: 4px;
+      background-color: #251C41;
+      position: absolute;
+      top: 10px;
+      left: 0;
+      transition: all .4s; }
+    .menu-desktop__btn:after {
+      top: -10px; }
+    .menu-desktop__btn.active {
+      height: 0; }
+      .menu-desktop__btn.active:before {
+        transform: rotate(45deg) scaleX(0.6) translateX(12px);
+        background-color: #37719b;
+        top: 0; }
+      .menu-desktop__btn.active:after {
+        transform: rotate(-45deg) scaleX(0.6) translateX(12px);
+        background-color: #37719b;
+        top: 0; }
+  .menu-desktop__phone {
+    padding: 30px 30px 40px 30px; }
 
 /* -------------------------------------------Header End*/
 /* -------------------------------------------Slider Start*/
@@ -2778,7 +2853,7 @@ Build date: 2019-12-19 16:51:02
   .catalog-aside__btn {
     max-width: 231px;
     width: 100%;
-    margin-top: 30px;
+    margin: 20px 20px;
     min-height: 50px;
     background-color: transparent;
     border: 1px solid #37719b;
@@ -3286,3 +3361,66 @@ Build date: 2019-12-19 16:51:02
         transition: all .3s; }
 
 /* --********************************************************Login.html****************************************************-- */
+@media (max-width: 1300px) {
+  .container {
+    max-width: 1000px; }
+  .top-menu__line + li {
+    margin-left: 20px; }
+  .header-menu__line + li {
+    margin-left: 25px; }
+  .header-menu__log {
+    max-width: 200px; }
+  .slider-item__descr {
+    max-width: 530px; }
+  .slider-item__title {
+    font-size: 168px; } }
+
+@media (max-width: 1000px) {
+  .container {
+    max-width: none; }
+  .header__logo {
+    margin-right: 20px; }
+  .header__top {
+    justify-content: center; }
+  .header__top-text {
+    display: none; }
+  .header-menu__goods {
+    max-width: 180px; }
+  .header-menu__log {
+    max-width: 180px; }
+  .slider-item__descr {
+    max-width: 530px;
+    min-height: 520px;
+    font-size: 57px; }
+  .slider-item__title {
+    font-size: 140px; }
+  .slider-item__product {
+    min-height: 400px; } }
+
+@media (max-width: 850px) {
+  .header-menu__goods {
+    max-width: 150px; }
+  .header-menu__line + li {
+    margin-left: 15px; }
+  .header-menu__log {
+    max-width: 160px; }
+  .slider-item__title {
+    font-size: 125px; }
+  .slider-item__descr {
+    max-width: 464px;
+    min-height: 460px;
+    font-size: 55px;
+    padding: 40px; }
+  .slider-item__text {
+    margin: 0; }
+  .slider-item__product {
+    min-height: 320px; } }
+
+@media (max-width: 750px) {
+  .header-menu__inner {
+    display: none; }
+  .header-menu {
+    padding: 10px 0;
+    height: 50px; }
+  .menu-desktop__btn {
+    display: block; } }

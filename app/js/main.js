@@ -1,11 +1,21 @@
 $(function () {
 
+	/* ----------------------------------------------------menu-button */
+
+	$('.menu-desktop__btn').on('click', function () {
+		$(this).toggleClass('active');
+		$('.menu-desktop').toggleClass('active');
+	});
+
+
+	/* ---------------------------------------------------Slider */
+
 	$(".slider").owlCarousel({
 
 		items: 1,
 		dots: true,
 		lazyLoad: true,
-		autoplay: true,
+		autoplay: false,
 		autoplayTimeout: 4000,
 		smartSpeed: 1000,
 		loop: true
@@ -106,11 +116,16 @@ $(function () {
 
 	/* ----------------------------------------------------aside-type */
 
+
 	$('.catalog-aside__type').on('click', function (e) {
 		e.preventDefault();
+		let id = $(this).attr('data-type');
+
 		$(this).toggleClass('active');
-		$('.catalog-aside__brend').toggleClass('show');
-		
+
+		$('#' + id).slideToggle('600');
+		return false;
+
 	});
 
 
