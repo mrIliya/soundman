@@ -176,5 +176,11 @@ $(function () {
 		});
 	});
 
+	/* ----------------------------------------------------header-mobile */
+
+	$('.header-mobile__btn').on('click', function () { 
+		$('.header-mobile__input').toggleClass('show');
+	});
+
 });
 

@@ -107,13 +107,21 @@
 }
 
 @media (max-width: 750px) {
+   .header-wrapper {
+      display: none;
+   }
+
+   .header__top {
+      display: none;
+   }
+
    .header-menu__inner {
       display: none;
    }
 
    .header-menu {
-      padding: 10px 0;
-      height: 50px;
+      padding: 20px 0;
+		height: 60px;
    }
 
    .menu-desktop {
@@ -121,6 +129,14 @@
       &__btn {
          display: block;
       }
+   }
+
+   .header-main {
+		display: none;
+   }
+
+   .header-mobile {
+      display: flex;
    }
 
 }
