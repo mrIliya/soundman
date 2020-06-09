@@ -351,9 +351,10 @@
    &__search {
 		margin-left: 60px;
 		position: absolute;
-		top: 50%;
+		top: 40%;
 		left: 0;
 		transform: translate(0, -50%);
+		z-index: 10000;
 	}
 
    &__input {
