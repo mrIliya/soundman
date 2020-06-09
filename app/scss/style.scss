@@ -508,24 +508,25 @@
    text-align: center;
 
    &__inner {
-      display: flex;
+		display: flex;
+		justify-content: space-between;
    }
 
    &__content {
       justify-content: space-between;
-      flex-wrap: wrap;
       width: 100%;
       display: none;
 
       &.current-tab {
          display: flex;
       }
-   }
+	}
+	
 }
 
 .goods-filter {
    max-width: 270px;
-   margin-right: 30px;
+   margin-right: 26px;
 
    &__btn {
       min-width: 270px;
@@ -594,12 +595,14 @@
    }
 }
 
+
+
 /* -------------------------------------------Goods End*/
 
 /* -------------------------------------------Choice Start*/
 
 .choice {
-   padding: 90px 50px;
+   padding: 90px 50px 60px 50px;
    background-color: $main-bg;
    color: #fff;
    text-align: center;
@@ -631,7 +634,8 @@
       font-size: 18px;
       line-height: 1.5;
       font-family: "Roboto-Bold";
-      overflow: hidden;
+		overflow: hidden;
+		margin-bottom: 30px;
 
       &:hover {
          a {

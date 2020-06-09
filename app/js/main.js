@@ -15,10 +15,10 @@ $(function () {
 		items: 1,
 		dots: true,
 		lazyLoad: true,
-		autoplay: false,
+		autoplay: true,
 		autoplayTimeout: 4000,
 		smartSpeed: 1000,
-		loop: true
+		loop: true,
 
 	});
 
@@ -178,7 +178,7 @@ $(function () {
 
 	/* ----------------------------------------------------header-mobile */
 
-	$('.header-mobile__btn').on('click', function () { 
+	$('.header-mobile__btn').on('click', function () {
 		$('.header-mobile__input').toggleClass('show');
 	});
 
