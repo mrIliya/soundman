@@ -617,8 +617,8 @@
 
    &__inner {
       display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+		flex-wrap: wrap;
+		justify-content: center;
    }
 
    &__item {
@@ -648,7 +648,10 @@
          background-color: rgba(255, 255, 255, .5);
          width: 100%;
          transition: all .4s;
-      }
+		}
+		&+div{
+			margin-left: 20px;
+		}
    }
 }
 
