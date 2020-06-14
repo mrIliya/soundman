@@ -11,7 +11,7 @@
 
 <body>
 
-	<header class="header">
+	<header class="header" id="top">
 		<div class="header-wrapper">
 			<div class="container">
 				<div class="header__top">
@@ -209,11 +209,15 @@
 					</a>
 					<a class="header-mobile__icon header-main__notification main-icon account" href="#">
 						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M24 12C24 5.36774 18.633 0 12 0C5.36774 0 0 5.367 0 12C0 18.5735 5.32214 24 12 24C18.6504 24 24 18.6037 24 12ZM12 1.40625C17.8414 1.40625 22.5938 6.15857 22.5938 12C22.5938 14.1368 21.9582 16.1907 20.7795 17.9304C16.0466 12.8394 7.96198 12.8302 3.22046 17.9304C2.04181 16.1907 1.40625 14.1368 1.40625 12C1.40625 6.15857 6.15857 1.40625 12 1.40625ZM4.09753 19.0547C8.30566 14.3346 15.6954 14.3357 19.9023 19.0547C15.6801 23.7784 8.32159 23.7799 4.09753 19.0547Z" fill="#251C41"/>
-							<path d="M12 12.7031C14.3262 12.7031 16.2188 10.8105 16.2188 8.48438V7.07812C16.2188 4.75195 14.3262 2.85938 12 2.85938C9.67383 2.85938 7.78125 4.75195 7.78125 7.07812V8.48438C7.78125 10.8105 9.67383 12.7031 12 12.7031ZM9.1875 7.07812C9.1875 5.52722 10.4491 4.26562 12 4.26562C13.5509 4.26562 14.8125 5.52722 14.8125 7.07812V8.48438C14.8125 10.0353 13.5509 11.2969 12 11.2969C10.4491 11.2969 9.1875 10.0353 9.1875 8.48438V7.07812Z" fill="#251C41"/>
-							</svg>
+							<path
+								d="M24 12C24 5.36774 18.633 0 12 0C5.36774 0 0 5.367 0 12C0 18.5735 5.32214 24 12 24C18.6504 24 24 18.6037 24 12ZM12 1.40625C17.8414 1.40625 22.5938 6.15857 22.5938 12C22.5938 14.1368 21.9582 16.1907 20.7795 17.9304C16.0466 12.8394 7.96198 12.8302 3.22046 17.9304C2.04181 16.1907 1.40625 14.1368 1.40625 12C1.40625 6.15857 6.15857 1.40625 12 1.40625ZM4.09753 19.0547C8.30566 14.3346 15.6954 14.3357 19.9023 19.0547C15.6801 23.7784 8.32159 23.7799 4.09753 19.0547Z"
+								fill="#251C41" />
+							<path
+								d="M12 12.7031C14.3262 12.7031 16.2188 10.8105 16.2188 8.48438V7.07812C16.2188 4.75195 14.3262 2.85938 12 2.85938C9.67383 2.85938 7.78125 4.75195 7.78125 7.07812V8.48438C7.78125 10.8105 9.67383 12.7031 12 12.7031ZM9.1875 7.07812C9.1875 5.52722 10.4491 4.26562 12 4.26562C13.5509 4.26562 14.8125 5.52722 14.8125 7.07812V8.48438C14.8125 10.0353 13.5509 11.2969 12 11.2969C10.4491 11.2969 9.1875 10.0353 9.1875 8.48438V7.07812Z"
+								fill="#251C41" />
+						</svg>
 					</a>
-				</div>				
+				</div>
 			</div>
 		</div>
 	</header>
@@ -248,7 +252,7 @@
 		</div>
 	</section>
 
-		<section class="goods">
+	<section class="goods">
 		<div class="container">
 			<div class="goods__title title">100% совместимость
 				<span>с любым интерфейсом</span></div>
@@ -394,7 +398,8 @@
 								fill="#C4C4C4" />
 						</svg>
 						<span>Со скидкой</span></button>
-					<a class="goods-filter__link" href="catalog.html" style="background-image: url(/images/look-more-1.png);">
+					<a class="goods-filter__link" href="catalog.html"
+						style="background-image: url(/images/look-more-1.png);">
 						<span>Смотреть больше</span></a>
 				</div>
 				<div class="goods__content current-tab" id="1">
@@ -1086,7 +1091,7 @@
 		</div>
 	</section>
 
-	<!-- <section class="best">
+	<section class="best">
 		<div class="container">
 			<div class="best__inner">
 				<div class="best-descr">
@@ -1103,6 +1108,7 @@
 					<img class="best__image" src="images/soundman-1.png" alt=""></img>
 					<div class="best__bg"><span>5 best models</span></div>
 				</div>
+				<a class="best-descr__btn best-descr__btn-mobile button" href="#">Пройти тест и получить скидку!</a>
 			</div>
 		</div>
 	</section>
@@ -1171,6 +1177,14 @@
 			<div class="advantages__title title">Чем беспроводные лучше?
 				<span>Все о преимуществах наушников Bluetooth</span>
 			</div>
+			<div class="advantages__wrapper-mobile advantages__wrapper">
+				<div class="advantages__wrap">
+					<div class="advantages__image">
+						<img src="images/product-5.png" alt="">
+					</div>
+				</div>
+			</div>
+
 			<div class="advantages__inner">
 				<div class="advantages-descr descr__left">
 					<div class="advantages-descr__item">
@@ -1702,6 +1716,50 @@
 					<a class="info-item__link" href="#">Перейти в блог</a>
 				</div>
 			</div>
+
+			<div class="info__content-mobile">
+				<div class="info__buttons-mobile">
+					<div class="info__btn-mobile" data-class="class1"><span>Есть ли гарантия?</span> </div>
+					<div class="info-item__mobile" id="class1">
+						<div class="info-item__title-mobile">Гарантия на всю продукцию 3 месяца</div>
+						<div class="info-item__text-mobile">При покупке наушников важно понимать, что любой ваш выбор в
+							каком-то
+							отношении будет компромиссом. Лишь правильные приоритеты позволят найти оптимальное решение,
+							удовлетворяющее главным требованиям. Условно можно выделить три критерия, от которых и придётся
+							отталкиваться. Речь о доступности, портативности и, конечно, качестве звука.
+						</div>
+					</div>
+					<div class="info__btn-mobile" data-class="class2"><span>Сколько устройств можно подключить?</span> </div>
+					<div class="info-item__mobile" id="class2">
+						<div class="info-item__title-mobile">Возможность подключения нескольких устройств</div>
+						<div class="info-item__text-mobile">Наушники, как и любой гаджет, покупаются под определённые задачи и
+							цели.
+							Необходимо понимать, когда и как вы будете их использовать. От сценариев использования зависит
+							выбор
+							вида наушников.
+						</div>
+					</div>
+					<div class="info__btn-mobile" data-class="class3"><span>Какой провод использовать?</span> </div>
+					<div class="info-item__mobile" id="class3">
+						<div class="info-item__title-mobile">Лучшие гарнитуры и аксессуары</div>
+						<div class="info-item__text-mobile">Для использования на работе и дома обычно покупаются
+							полноразмерные
+							гарнитуры, которые обеспечивают полный охват ушной раковины и максимально комфортную посадку на
+							голове. Такой тип как нельзя лучше располагает к длительному прослушиванию музыки.
+						</div>
+					</div>
+					<div class="info__btn-mobile" data-class="class4"><span>Сколько устройств можно подключить?</span> </div>
+					<div class="info-item__mobile" id="class4">
+						<div class="info-item__title-mobile">Лучшие гарнитуры и аксессуары</div>
+						<div class="info-item__text-mobile">Для использования на работе и дома обычно покупаются
+							полноразмерные
+							гарнитуры, которые обеспечивают полный охват ушной раковины и максимально комфортную посадку на
+							голове. Такой тип как нельзя лучше располагает к длительному прослушиванию музыки.
+						</div>
+					</div>
+				</div>
+				<a class="info-item__link-mobile" href="#">Перейти в блог</a>
+			</div>
 		</div>
 	</section>
 
@@ -1742,19 +1800,26 @@
 	<section class="communication best">
 		<div class="container">
 			<div class="communication__inner best__inner">
-				<div class="best__models">
+				<div class="communication__models best__models">
 					<img class="communication__image best__image" src="images/soundwoman-1.png" alt=""></img>
 				</div>
-				<div class="best-descr">
-					<div class="best-descr__title"><span>Персональный</span>
+
+				<div class="communication__descr best-descr">
+					<div class="communication__descr-title best-descr__title"><span>Персональный</span>
 						Консультант на связи!
 					</div>
-					<div class="best-descr__text">Когда Вы совершаете покупки на сайте “AudioFree” - все Ваши заказы ведет
+					<div class="communication__text best-descr__text">Когда Вы совершаете покупки на сайте “AudioFree” - все
+						Ваши заказы ведет
 						личный менеджер, который поможет с выбором и оформлением заказа.
 						<span>Приятных и безопасных покупок!</span>
 					</div>
-					<a class="best-descr__btn button" href="#">Получить консультацию</a>
+					<a class="communication__descr-btn best-descr__btn button" href="#">Получить консультацию</a>
 				</div>
+
+				<div class="communication__models-mobile best__models">
+					<img class="communication__image best__image" src="images/soundwoman-1.png" alt=""></img>
+				</div>
+				<a class="communication__descr-btn-mobile best-descr__btn-mobile button" href="#">Получить консультацию</a>
 			</div>
 		</div>
 	</section>
@@ -1838,31 +1903,33 @@
 				</div>
 				<div class="footer-item">
 					<div class="footer-item__title">Контакты</div>
-					<div class="footer-item__contacts">
-						<a class="footer-item__icon" href="tel:88005519202">
-							<img src="images/footer-ico-1.png" alt="">
-						</a>
-						<div class="footer-item__info">
-							<span>Бесплатный звонок по UA</span>
-							<a class="footer-item__tel" href="tel:88005519202">8 800 551-92-02</a>
+					<div class="footer-item__contacts-inner">
+						<div class="footer-item__contacts">
+							<a class="footer-item__icon" href="tel:88005519202">
+								<img src="images/footer-ico-1.png" alt="">
+							</a>
+							<div class="footer-item__info">
+								<span>Бесплатный звонок по UA</span>
+								<a class="footer-item__tel" href="tel:88005519202">8 800 551-92-02</a>
+							</div>
 						</div>
-					</div>
-					<div class="footer-item__contacts">
-						<a class="footer-item__icon" href="#">
-							<img src="images/footer-ico-1.png" alt="">
-						</a>
-						<div class="footer-item__info">
-							<span>город Киев,</span>
-							<a class="footer-item__contact" href="#">бульвар С.Бандеры 13</a>
+						<div class="footer-item__contacts">
+							<a class="footer-item__icon" href="#">
+								<img src="images/footer-ico-1.png" alt="">
+							</a>
+							<div class="footer-item__info">
+								<span>город Киев,</span>
+								<a class="footer-item__contact" href="#">бульвар С.Бандеры 13</a>
+							</div>
 						</div>
-					</div>
-					<div class="footer-item__contacts">
-						<a class="footer-item__icon" href="#">
-							<img src="images/footer-ico-1.png" alt="">
-						</a>
-						<div class="footer-item__info">
-							<span>По всем вопросам пишите:</span>
-							<a class="footer-item__contact" href="mailto:hello@audiofree.ua">hello@audiofree.ua</a>
+						<div class="footer-item__contacts">
+							<a class="footer-item__icon" href="#">
+								<img src="images/footer-ico-1.png" alt="">
+							</a>
+							<div class="footer-item__info">
+								<span>По всем вопросам пишите:</span>
+								<a class="footer-item__contact" href="mailto:hello@audiofree.ua">hello@audiofree.ua</a>
+							</div>
 						</div>
 					</div>
 					<ul class="footer-item__social social-list">
@@ -1905,7 +1972,7 @@
 				</div>
 			</div>
 		</div>
-	</footer> -->
+	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>
