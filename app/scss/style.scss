@@ -175,6 +175,7 @@
 		position: fixed;
 		width: 100%;
 		background-color: #fff;
+		top: 0;
 	}
 
    &__inner {
@@ -362,7 +363,7 @@
       top: 30%;
       left: 0;
       transform: translate(0, -50%);
-      z-index: 10000;
+      z-index: 90;
    }
 
    &__input {
@@ -2042,7 +2043,9 @@
       font-family: "Roboto-Medium";
       position: relative;
       padding: 30px 60px 25px 25px;
-      border-bottom: 1px solid $border;
+		border-bottom: 1px solid $border;
+		cursor: pointer;
+		transition: all .3s;
 
       &::after {
          content: url(../images/aside-title-1.png);
@@ -2054,7 +2057,7 @@
 
    &__item {
       padding: 20px 25px;
-      border-bottom: 1px solid $border;
+		border-bottom: 1px solid $border;
    }
 
    &__type {
@@ -2090,7 +2093,7 @@
 
    &__btn {
       max-width: 231px;
-      width: 100%;
+		width: 100%;
       margin: 20px 20px;
       min-height: 50px;
       background-color: transparent;
