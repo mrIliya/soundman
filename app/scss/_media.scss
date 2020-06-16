@@ -697,6 +697,47 @@
          margin-bottom: 0;
       }
    }
+
+   .purchased__button,
+   .login-form__btn {
+      background-color: $main-bg;
+
+      &:hover {
+         span {
+            transform: none;
+         }
+      }
+   }
+
+   .checkout__inner {
+      display: block;
+   }
+
+   .checkout-item {
+      width: 100%;
+      text-align: center;
+      padding: 10px 30px;
+      border: none;
+
+      &:first-child {
+         padding-left: 30px;
+      }
+
+      &:last-child {
+         padding-right: 30px;
+      }
+
+      &__input {
+         margin: 0 auto;
+         margin-bottom: 15px;
+         max-width: 600px;
+         width: 100%;
+      }
+
+      &__textarea {
+         max-width: 600px;
+      }
+   }
 }
 
 /* -----------------------------------1000px */
@@ -945,6 +986,10 @@
 
 @media (max-width: 800px) {
 
+	.info{
+		padding: 50px 0;
+	}
+
    .product {
       position: relative;
       padding-top: 70px;
@@ -1142,6 +1187,12 @@
          position: absolute;
          top: 30px;
          right: 30px;
+      }
+   }
+
+   .login {
+      .breadcrumbs {
+         margin-bottom: 20px;
       }
    }
 
@@ -1347,7 +1398,9 @@
    .descr,
    .interested,
    .purchased,
-   .guarantee {
+   .guarantee,
+   .login,
+   .checkout {
       padding: 35px 0;
    }
 
@@ -1470,6 +1523,24 @@
    .guarantee-item__title,
    .guarantee-content__title {
       margin-bottom: 25px;
+   }
+
+   .login-form {
+      max-width: none;
+      padding: 0;
+   }
+
+   .main__input {
+      margin: 0 auto;
+      margin-bottom: 20px;
+   }
+
+   .login-form__btn {
+      margin: 0 auto;
+   }
+
+   .login-form__checkbox {
+      justify-content: space-around;
    }
 
 }
@@ -1700,6 +1771,38 @@
       }
    }
 
+   .title-fluid {
+      margin-bottom: 15px;
+   }
+
+   .login__inner {
+      padding: 30px 0;
+   }
+
+   .login-form {
+      border: none;
+	}
+	
+	.checkout__inner{
+		margin-bottom: 20px;
+		padding: 15px 0;
+	}
+
+   .checkout-item {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      border: none;
+
+      &:first-child {
+         padding-left: 10px;
+      }
+
+      &:last-child {
+         padding-right: 10px;
+      }
+   }
+
 }
 
 /* -----------------------------------500px */
@@ -1749,7 +1852,7 @@
 
    .goods-filter {
       justify-content: space-between;
-      padding: 0 10px;
+      padding: 0 8px;
    }
 
    .button {
@@ -2053,4 +2156,8 @@
       }
    }
 
+
+   .main__input {
+      width: 290px;
+   }
 }
