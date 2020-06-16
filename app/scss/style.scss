@@ -2439,7 +2439,15 @@
       color: $price;
       padding: 10px 45px;
       border-right: 1px solid $border;
-      margin-right: 30px;
+		margin-right: 30px;
+		span{
+			display: none;
+			font-size: 14px;
+			color: $crumbs;
+			font-family: "Roboto-Regular";
+			margin-top: 10px;
+			margin-bottom: 5px;
+		}
    }
 
    &__select {
