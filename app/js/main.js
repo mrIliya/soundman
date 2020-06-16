@@ -44,6 +44,18 @@ $(function () {
 		dotClass: 'product-slider__dots',
 		animateOut: 'fadeOut',
 		mouseDrag: false,
+		responsive:{
+			0:{
+				 items:1
+			},
+			800:{
+				items: 1,
+				dots: false
+			},
+			1000:{
+				 items:1
+			}
+	  }
 
 	});
 

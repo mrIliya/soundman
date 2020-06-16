@@ -168,15 +168,17 @@
    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12);
    border-left: none;
    border-right: none;
-	position: relative;
-	z-index: 10;
-	
-	&.fixed{
-		position: fixed;
-		width: 100%;
-		background-color: #fff;
-		top: 0;
-	}
+   position: relative;
+   z-index: 10;
+
+   &.fixed {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      z-index: 9999;
+   }
 
    &__inner {
       display: flex;
@@ -184,7 +186,6 @@
       align-items: center;
       height: 40px;
       padding: 10px 0;
-
    }
 
    &__goods,
@@ -251,12 +252,13 @@
    width: 100%;
    text-align: center;
    transition: all .5s;
-   height: 100vh;
 
    &.active {
       left: 0;
       opacity: 1;
-      z-index: 100;
+      z-index: 9999;
+      max-height: 100vh;
+      overflow-y: auto;
    }
 
    li {
@@ -837,8 +839,8 @@
    left: 0;
 }
 
-.communication__models-mobile{
-	display: none;
+.communication__models-mobile {
+   display: none;
 }
 
 .best-descr {
@@ -1239,8 +1241,8 @@
 }
 
 .info__content-mobile {
-	text-align: left;
-	display: none;
+   text-align: left;
+   display: none;
 
    .info__btn-mobile {
       min-height: 63px;
@@ -1252,8 +1254,8 @@
       padding: 20px 60px 20px 30px;
       font-size: 25px;
       font-family: "Roboto-Bold";
-		position: relative;
-		transition: all .3s;
+      position: relative;
+      transition: all .3s;
 
       &:after {
          content: '+';
@@ -1281,17 +1283,17 @@
       background-color: #fff;
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
       border-radius: 0 0 8px 8px;
-	}
-	
-	.info-item__link-mobile{
-		display: block;
-		text-align: center;
-		margin-top: 25px;
-		color: $main-bg;
-		font-size: 20px;
-		font-family: "Roboto-Bold";
-		text-decoration: underline;
-	}
+   }
+
+   .info-item__link-mobile {
+      display: block;
+      text-align: center;
+      margin-top: 25px;
+      color: $main-bg;
+      font-size: 20px;
+      font-family: "Roboto-Bold";
+      text-decoration: underline;
+   }
 
 }
 
@@ -2043,9 +2045,9 @@
       font-family: "Roboto-Medium";
       position: relative;
       padding: 30px 60px 25px 25px;
-		border-bottom: 1px solid $border;
-		cursor: pointer;
-		transition: all .3s;
+      border-bottom: 1px solid $border;
+      cursor: pointer;
+      transition: all .3s;
 
       &::after {
          content: url(../images/aside-title-1.png);
@@ -2053,11 +2055,15 @@
          top: 27px;
          right: 25px;
       }
+
+      &.active {
+         border-bottom: none;
+      }
    }
 
    &__item {
       padding: 20px 25px;
-		border-bottom: 1px solid $border;
+      border-bottom: 1px solid $border;
    }
 
    &__type {
@@ -2093,7 +2099,7 @@
 
    &__btn {
       max-width: 231px;
-		width: 100%;
+      width: 100%;
       margin: 20px 20px;
       min-height: 50px;
       background-color: transparent;
@@ -2417,7 +2423,7 @@
       display: block;
       max-width: 500px;
       width: 100%;
-      padding: 12px 0 12px 30px;
+      padding: 12px 10px 12px 30px;
       border: 1px solid $border;
       border-top: none;
       border-bottom: none;
@@ -2451,7 +2457,9 @@
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      background-color: transparent;
+		background-color: transparent;
+		margin-right: 30px;
+		flex: 0 0 auto;
    }
 }
 
