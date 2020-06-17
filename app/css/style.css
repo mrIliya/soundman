@@ -2689,7 +2689,8 @@ Build date: 2019-12-19 16:51:02
     line-height: 1.5;
     font-family: "Roboto-Bold";
     overflow: hidden;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    background-color: #dfdfdf; }
     .choice__item:hover a {
       transform: scale(1.1); }
     .choice__item a {
@@ -3144,24 +3145,28 @@ Build date: 2019-12-19 16:51:02
 .info-item {
   max-width: 670px;
   min-height: 415px;
+  max-height: 415px;
+  overflow-y: auto;
   width: 100%;
   background-color: #fff;
   box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.05), 0px 4px 18px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  padding: 40px 30px 65px 85px;
+  padding: 10px 30px 0 85px;
   position: absolute;
   top: 0;
   right: 0;
   text-align: left;
-  display: none; }
+  display: none;
+  border-bottom: 30px solid #fff;
+  border-top: 30px solid #fff; }
   .info-item__title {
     font-size: 22px;
     font-family: "Roboto-Bold";
-    margin-bottom: 40px; }
+    margin-bottom: 27px; }
   .info-item__text {
     font-size: 16px;
     line-height: 30px;
-    margin-bottom: 50px; }
+    margin-bottom: 40px; }
   .info-item__link {
     font-size: 16px;
     text-decoration: underline;
@@ -3601,7 +3606,7 @@ Build date: 2019-12-19 16:51:02
   .descr__item {
     border-radius: 10px;
     display: none;
-    padding: 75px 0 32px 75px;
+    padding: 60px 0 0 75px;
     font-size: 18px;
     line-height: 24px;
     font-family: "Roboto-Medium";
@@ -3612,8 +3617,11 @@ Build date: 2019-12-19 16:51:02
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 460px;
-    overflow: hidden; }
+    min-height: 460px;
+    max-height: 460px;
+    overflow-y: auto;
+    border-top: 15px solid #fff;
+    border-bottom: 30px solid #fff; }
     .descr__item p {
       width: 50%; }
       .descr__item p + p {
