@@ -19,18 +19,18 @@ $(function () {
 		autoplayTimeout: 4000,
 		smartSpeed: 1000,
 		loop: true,
-		responsive:{
-			0:{
-				 items:1
+		responsive: {
+			0: {
+				items: 1
 			},
-			600:{
+			600: {
 				items: 1,
 				autoplay: false
 			},
-			1000:{
-				 items:1
+			1000: {
+				items: 1
 			}
-	  }
+		}
 
 	});
 
@@ -258,10 +258,129 @@ $(function () {
 
 	});
 
-	AOS.init({
-		once: true,
-		disable: 'phone'
+});
+
+/* ----------------------------------------------------modal window --> */
+
+const modal = document.querySelector('.modal');
+const closeBtn = document.querySelector('.login-form__button');
+const form = document.querySelector('.login-form');
+const btnLogin = document.querySelector('#modal-open');
+const html = document.documentElement;
+const scrollPosition = window.pageYOffset;
+const goToLogin = document.querySelector('#go-to-login');
+const goToCabinet = document.querySelector('#go-to-cabinet');
+const loginInput = document.querySelectorAll('.login-form__input');
+const loginFormCheckbox = document.querySelector('.login-form__checkbox');
+const userName = document.querySelector('#user-name');
+const userPass = document.querySelector('#user-pass');
+const loginFormBtn = document.querySelectorAll('.login-form__btn');
+const backButton = document.querySelector('.back__button');
+
+const closeModal = () => {
+	modal.style.transform = 'scale(0)';
+	modal.style.zIndex = '-1';
+
+	document.onkeydown = (e) => {
+		if (e.keyCode == 27) {
+			closeModal();
+		}
+
+		document.onkeydown = null;
+	}
+
+	closeBtn.addEventListener('click', () => {
+		closeModal();
+	})
+
+	modal.addEventListener('click', () => {
+		closeModal();
+	})
+
+	html.style.top = "";
+	html.classList.remove("modal__opened");
+
+	if (changeInputs) {
+		resetChanges();
+	}
+
+	form.reset();
+
+}
+
+const showModal = () => {
+	if (closeModal) {
+		btnLogin.addEventListener('click', (e) => {
+			e.preventDefault();
+
+			html.classList.add("modal__opened");
+
+			modal.style.transform = 'scale(1)';
+			modal.style.zIndex = '1000';
+
+		})
+	}
+}
+
+const changeInputs = () => {
+	loginInput.forEach((e) => {
+		e.style.display = 'none';
 	});
 
+	loginFormBtn.forEach((e) => {
+		e.style.display = 'none';
+	});
+
+	loginFormCheckbox.style.display = 'none';
+	userName.style.display = 'block';
+	userPass.style.display = 'block';
+	goToCabinet.style.display = 'block';
+
+}
+
+
+const resetChanges = () => {
+
+	backButton.style.visibility = 'hidden';
+
+	loginInput.forEach((e) => {
+		e.style.display = 'block';
+	});
+
+	loginFormBtn.forEach((e) => {
+		e.style.display = 'block';
+	});
+
+	loginFormCheckbox.style.display = '';
+	userName.style.display = 'none';
+	userPass.style.display = 'none';
+	goToCabinet.style.display = 'none';
+}
+
+form.addEventListener('click', (e) => {
+	e.stopPropagation();
+})
+	
+goToLogin.addEventListener('click', () => {
+	changeInputs();
+	backButton.style.visibility = 'visible';
+})
+
+backButton.addEventListener('click', () => {
+	resetChanges();
+
+})
+
+
+closeModal();
+showModal();
+
+/* ----------------------------------------------------modal window <-- */
+
+
+AOS.init({
+	once: true,
+	disable: 'tablet'
 });
+
 
