@@ -4183,7 +4183,7 @@ Build date: 2019-12-19 16:51:02
   line-height: 20px; }
 
 /* --********************************************************Guarantee.html****************************************************-- */
-/* --********************************************************Login.html****************************************************-- */
+/* --********************************************************Modal****************************************************-- */
 .modal {
   width: 100vw;
   height: 100vh;
@@ -4197,16 +4197,6 @@ Build date: 2019-12-19 16:51:02
   .modal__inner {
     width: 100%;
     height: 100%; }
-
-.login {
-  padding: 70px 0 47px 0; }
-  .login__inner {
-    padding: 50px 0;
-    border: 2px solid #d9d9d9;
-    border-left: none;
-    border-right: none; }
-  .login__title {
-    text-align: center; }
 
 #user-name,
 #user-pass,
@@ -4295,7 +4285,28 @@ Build date: 2019-12-19 16:51:02
         transform: scale(1.1);
         transition: all .3s; }
 
-/* --********************************************************Login.html****************************************************-- */
+/* --********************************************************Modal****************************************************-- */
+/* --********************************************************cabinet.html****************************************************-- */
+.cabinet {
+  background-color: #fff;
+  padding: 70px 0 47px 0; }
+
+.cabinet-form {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .cabinet-form__input {
+    margin-bottom: 30px; }
+    .cabinet-form__input:nth-child(4) {
+      margin-bottom: 0; }
+  .cabinet-form__button {
+    background-color: #37719b; }
+    .cabinet-form__button:hover {
+      background-color: rgba(55, 113, 155, 0.8); }
+
+/* --********************************************************cabinet.html****************************************************-- */
 @media (max-width: 1920px) {
   .choice__item {
     max-width: 270px;

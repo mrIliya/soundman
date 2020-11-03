@@ -198,7 +198,7 @@
       border-bottom: transparent;
       height: 40px;
       max-width: 270px;
-		width: 100%;
+      width: 100%;
    }
 
    &__catalog {
@@ -2771,7 +2771,7 @@
 
 
 
-/* --********************************************************Login.html****************************************************-- */
+/* --********************************************************Modal****************************************************-- */
 
 .modal {
    width: 100vw;
@@ -2779,10 +2779,10 @@
    position: fixed;
    left: 0;
    top: 0;
-	background-color: rgba(21, 27, 51, 0.93);
-	transform: scale(0);
-	z-index: -1;
-	transition: all .5s;
+   background-color: rgba(21, 27, 51, 0.93);
+   transform: scale(0);
+   z-index: -1;
+   transition: all .5s;
 
    &__inner {
       width: 100%;
@@ -2791,108 +2791,95 @@
 
 }
 
-.login {
-   padding: 70px 0 47px 0;
-
-   &__inner {
-      padding: 50px 0;
-      border: 2px solid $border;
-      border-left: none;
-      border-right: none;
-   }
-
-   &__title {
-      text-align: center;
-   }
-}
 #user-name,
 #user-pass,
-#go-to-cabinet{
-	display: none;
+#go-to-cabinet {
+   display: none;
 }
 
-.back__button{
-	background-color: transparent;
-	border: 1px solid #314bbe;
-	border-radius: 3px;
-	padding: 0 5px;
-	max-height: 23px;
-	visibility: hidden;
+.back__button {
+   background-color: transparent;
+   border: 1px solid #314bbe;
+   border-radius: 3px;
+   padding: 0 5px;
+   max-height: 23px;
+   visibility: hidden;
 
-	&:hover{
-		color: #fff;
-		background-color: $border;
-	}
+   &:hover {
+      color: #fff;
+      background-color: $border;
+   }
 }
 
 .login-form {
-	max-width: 500px;
-	width: 100%;
-	text-align: center;
+   max-width: 500px;
+   width: 100%;
+   text-align: center;
    margin: 0 auto;
    padding: 10px 20px 20px 20px;
-	border: 1px solid $border;
-	border-radius: 5px;
+   border: 1px solid $border;
+   border-radius: 5px;
    background-color: #fff;
    position: absolute;
    top: 50%;
    left: 50%;
-	transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
 
-	&__top{
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 30px;
-	}
+   &__top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+   }
 
-	&__button {
-		width: 30px;
-		height: 30px;
-		background-color: transparent;
-		position: relative;
-		top: 0;
-		right: 0;
-		cursor: pointer;
-		transition: all .4s;
-	
-		&::before,
-		&::after{
-			content: '';
-			width: 30px;
-			height: 3px;
-			background-color:#000;
-			border-radius: 3px;
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: rotate(45deg);
-		}
-	
-		&::after{
-			transform: rotate(-45deg);
-		}
-	
-		&:hover{
-			transform: rotate(90deg);
-			&::before,
-			&::after{
-			background-color: rgb(12, 107, 136);
-			height: 4px;
-		}
-			
-		}
-	}
-	
+   &__button {
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      position: relative;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      transition: all .4s;
+
+      &::before,
+      &::after {
+         content: '';
+         width: 30px;
+         height: 3px;
+         background-color: #000;
+         border-radius: 3px;
+         position: absolute;
+         top: 50%;
+         left: 0;
+         transform: rotate(45deg);
+      }
+
+      &::after {
+         transform: rotate(-45deg);
+      }
+
+      &:hover {
+         transform: rotate(90deg);
+
+         &::before,
+         &::after {
+            background-color: rgb(12, 107, 136);
+            height: 4px;
+         }
+
+      }
+   }
+
 
    &__input {
-		margin:0 auto 30px auto;
-		display: block;
-		
+      margin: 0 auto 30px auto;
+      display: block;
+
    }
 
    &__checkbox {
-		display: flex;
-		justify-content: center;
+      display: flex;
+      justify-content: center;
       align-items: center;
       margin-bottom: 30px;
    }
@@ -2913,8 +2900,8 @@
    }
 
    &__btn {
-		width: 100%;
-		margin: 0 auto;
+      width: 100%;
+      margin: 0 auto;
       max-width: auto;
       background-color: $main-bg;
 
@@ -2935,6 +2922,39 @@
 
 
 
-/* --********************************************************Login.html****************************************************-- */
+/* --********************************************************Modal****************************************************-- */
+
+/* --********************************************************cabinet.html****************************************************-- */
+
+.cabinet {
+   background-color: #fff;
+   padding: 70px 0 47px 0;
+}
+
+.cabinet-form {
+   max-width: 980px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+
+   &__input {
+      margin-bottom: 30px;
+
+      &:nth-child(4) {
+         margin-bottom: 0;
+      }
+   }
+
+   &__button {
+      background-color: $main-bg;
+
+      &:hover {
+         background-color: rgba(55, 113, 155, .8);
+      }
+   }
+}
+
+/* --********************************************************cabinet.html****************************************************-- */
 
 @import "media";
