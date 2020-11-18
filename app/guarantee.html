@@ -18,7 +18,7 @@
 					<div class="container">
 						<div class="header__top">
 							<div class="header__logo">
-								<img src="/images/header-logo-1.png" alt="">
+								<img src="images/header-logo-1.png" alt="">
 							</div>
 							<div class="header__top-text">Интернет магазин беспроводных наушников по UA</div>
 							<div class="header__top-menu top-menu">
@@ -507,11 +507,16 @@
 
 		<div class="modal">
 			<form class="login-form" action="">
-				<button class="login-form__button" type="button"></button>
+				<div class="login-form__top">
+					<button class="back__button" type="button">Назад</button>
+					<button class="login-form__button" type="button"></button>
+				</div>
+				<input class="login-form__input main__input" id="user-name" type="name" placeholder="Имя">
 				<input class="login-form__input main__input" type="name" placeholder="Имя">
 				<input class="login-form__input main__input" type="email" placeholder="E-mail">
 				<input class="login-form__input main__input" type="tel" placeholder="Телефон">
-				<input class="login-form__input main__input" type="text" placeholder="Город">
+				<input class="login-form__input main__input" id="user-pass" type="password" placeholder="Пароль">
+				<input class="login-form__input main__input" type="password" placeholder="Пароль">
 				<div class="login-form__checkbox">
 					<div class="login-form__check catalog-aside__check">
 						<input class="login-form__input catalog-aside__input" type="checkbox">
@@ -522,8 +527,9 @@
 						<label class="login-form__label catalog-aside__label" for="">Жен</label>
 					</div>
 				</div>
-				<a class="login-form__btn button" href="#"><span>Создать аккаунт</span> </a>
-				<a class="login-form__btn button" href="#"><span>Войти</span> </a>
+				<button class="login-form__btn button" type="submit"><span>Создать аккаунт</span> </button>
+				<button class="login-form__btn button" type="button" id="go-to-login"><span>Войти</span> </button>
+				<button class="login-form__btn button" type="submit" id="go-to-cabinet"><span>Войти</span> </button>
 			</form>
 		</div>
 

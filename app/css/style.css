@@ -3676,7 +3676,10 @@ Build date: 2019-12-19 16:51:02
     padding: 30px 60px 25px 25px;
     border-bottom: 1px solid #d9d9d9;
     cursor: pointer;
-    transition: all .3s; }
+    transition: all .3s;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none; }
     .catalog-aside__title::after {
       content: url(../images/aside-title-1.png);
       position: absolute;
@@ -3687,6 +3690,8 @@ Build date: 2019-12-19 16:51:02
   .catalog-aside__item {
     padding: 20px 25px;
     border-bottom: 1px solid #d9d9d9; }
+    .catalog-aside__item.hide {
+      display: none; }
   .catalog-aside__type {
     color: #313131;
     font-family: "Roboto-Medium";
@@ -3694,16 +3699,21 @@ Build date: 2019-12-19 16:51:02
     margin-bottom: 20px;
     position: relative;
     cursor: pointer;
-    z-index: 9; }
+    z-index: 9;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none; }
     .catalog-aside__type::after {
       content: url(../images/chevron-down.svg);
       position: absolute;
       top: 0;
       right: 0;
       transition: all .4s; }
-    .catalog-aside__type.active::after {
-      content: url(../images/chevron-down.svg);
-      transform: rotate(90deg); }
+    .catalog-aside__type.active {
+      margin-bottom: 0; }
+      .catalog-aside__type.active::after {
+        content: url(../images/chevron-down.svg);
+        transform: rotate(90deg); }
   .catalog-aside input {
     appearance: none;
     -webkit-appearance: none; }
@@ -3721,6 +3731,11 @@ Build date: 2019-12-19 16:51:02
       transform: scale(1.1);
       display: block;
       transition: all .3s; }
+    .catalog-aside__btn.hide {
+      display: none; }
+
+.catalog-aside__content--hide {
+  display: none; }
 
 .catalog-aside__check {
   display: flex;
@@ -4208,13 +4223,13 @@ Build date: 2019-12-19 16:51:02
   border: 1px solid #314bbe;
   border-radius: 3px;
   padding: 0 5px;
-  max-height: 23px;
-  visibility: hidden; }
+  max-height: 23px; }
   .back__button:hover {
     color: #fff;
     background-color: #d9d9d9; }
 
-.login-form {
+.login-form,
+.signin-form {
   max-width: 500px;
   width: 100%;
   text-align: center;
@@ -4227,11 +4242,13 @@ Build date: 2019-12-19 16:51:02
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
-  .login-form__top {
+  .login-form__top,
+  .signin-form__top {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-bottom: 30px; }
-  .login-form__button {
+  .login-form__button,
+  .signin-form__button {
     width: 30px;
     height: 30px;
     background-color: transparent;
@@ -4240,7 +4257,9 @@ Build date: 2019-12-19 16:51:02
     right: 0;
     cursor: pointer;
     transition: all .4s; }
-    .login-form__button::before, .login-form__button::after {
+    .login-form__button::before, .login-form__button::after,
+    .signin-form__button::before,
+    .signin-form__button::after {
       content: '';
       width: 30px;
       height: 3px;
@@ -4250,40 +4269,58 @@ Build date: 2019-12-19 16:51:02
       top: 50%;
       left: 0;
       transform: rotate(45deg); }
-    .login-form__button::after {
+    .login-form__button::after,
+    .signin-form__button::after {
       transform: rotate(-45deg); }
-    .login-form__button:hover {
+    .login-form__button:hover,
+    .signin-form__button:hover {
       transform: rotate(90deg); }
-      .login-form__button:hover::before, .login-form__button:hover::after {
+      .login-form__button:hover::before, .login-form__button:hover::after,
+      .signin-form__button:hover::before,
+      .signin-form__button:hover::after {
         background-color: #0c6b88;
         height: 4px; }
-  .login-form__input {
+  .login-form__input,
+  .signin-form__input {
     margin: 0 auto 30px auto;
     display: block; }
-  .login-form__checkbox {
+  .login-form__checkbox,
+  .signin-form__checkbox {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px; }
-  .login-form__check + div {
+  .login-form__check + div,
+  .signin-form__check + div {
     margin: 0 0 0 20px; }
-  .login-form__check input {
+  .login-form__check input,
+  .signin-form__check input {
     margin-bottom: 0; }
-  .login-form input {
+  .login-form input,
+  .signin-form input {
     appearance: none;
     -webkit-appearance: none; }
-  .login-form__btn {
+  .login-form__btn,
+  .signin-form__btn {
     width: 100%;
     margin: 0 auto;
     max-width: auto;
     background-color: #37719b; }
-    .login-form__btn + button {
+    .login-form__btn + button,
+    .signin-form__btn + button {
       margin-top: 20px; }
-    .login-form__btn:hover {
+    .login-form__btn:hover,
+    .signin-form__btn:hover {
       background-color: #37719b; }
-      .login-form__btn:hover span {
+      .login-form__btn:hover span,
+      .signin-form__btn:hover span {
         transform: scale(1.1);
         transition: all .3s; }
+
+.signin-form {
+  visibility: hidden; }
+  .signin-form__top {
+    justify-content: space-between; }
 
 /* --********************************************************Modal****************************************************-- */
 /* --********************************************************cabinet.html****************************************************-- */

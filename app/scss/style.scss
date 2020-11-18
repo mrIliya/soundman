@@ -2057,6 +2057,10 @@
       cursor: pointer;
       transition: all .3s;
 
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      user-select: none;
+
       &::after {
          content: url(../images/aside-title-1.png);
          position: absolute;
@@ -2072,6 +2076,11 @@
    &__item {
       padding: 20px 25px;
       border-bottom: 1px solid $border;
+
+
+      &.hide {
+         display: none;
+      }
    }
 
    &__type {
@@ -2083,6 +2092,10 @@
       cursor: pointer;
       z-index: 9;
 
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      user-select: none;
+
       &::after {
          content: url(../images/chevron-down.svg);
          position: absolute;
@@ -2092,6 +2105,8 @@
       }
 
       &.active {
+			margin-bottom: 0;
+
          &::after {
             content: url(../images/chevron-down.svg);
             transform: rotate(90deg);
@@ -2125,7 +2140,16 @@
          }
 
       }
+
+      &.hide {
+         display: none;
+      }
    }
+
+}
+
+.catalog-aside__content--hide {
+	display: none;
 
 }
 
@@ -2803,7 +2827,6 @@
    border-radius: 3px;
    padding: 0 5px;
    max-height: 23px;
-   visibility: hidden;
 
    &:hover {
       color: #fff;
@@ -2811,7 +2834,8 @@
    }
 }
 
-.login-form {
+.login-form,
+.signin-form {
    max-width: 500px;
    width: 100%;
    text-align: center;
@@ -2827,7 +2851,7 @@
 
    &__top {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       margin-bottom: 30px;
    }
 
@@ -2920,6 +2944,13 @@
    }
 }
 
+.signin-form {
+   visibility: hidden;
+
+   &__top {
+      justify-content: space-between;
+   }
+}
 
 
 /* --********************************************************Modal****************************************************-- */
