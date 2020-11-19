@@ -3685,38 +3685,32 @@ Build date: 2019-12-19 16:51:02
       position: absolute;
       top: 27px;
       right: 25px; }
-    .catalog-aside__title.active {
-      border-bottom: none; }
   .catalog-aside__item {
-    padding: 20px 25px;
-    border-bottom: 1px solid #d9d9d9; }
-    .catalog-aside__item.hide {
-      display: none; }
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 20px; }
   .catalog-aside__type {
     color: #313131;
     font-family: "Roboto-Medium";
     font-size: 18px;
-    margin-bottom: 20px;
+    padding: 20px 25px;
     position: relative;
     cursor: pointer;
     z-index: 9;
+    background-color: #fff;
     -moz-user-select: none;
     -khtml-user-select: none;
     user-select: none; }
     .catalog-aside__type::after {
       content: url(../images/chevron-down.svg);
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 20px;
+      right: 25px;
       transition: all .4s; }
-    .catalog-aside__type.active {
-      margin-bottom: 0; }
-      .catalog-aside__type.active::after {
-        content: url(../images/chevron-down.svg);
-        transform: rotate(90deg); }
   .catalog-aside input {
     appearance: none;
     -webkit-appearance: none; }
+  .catalog-aside__content {
+    padding: 0 25px 20px 25px; }
   .catalog-aside__btn {
     max-width: 231px;
     width: 100%;
@@ -3734,7 +3728,41 @@ Build date: 2019-12-19 16:51:02
     .catalog-aside__btn.hide {
       display: none; }
 
+.catalog-aside__title--active {
+  border-bottom: none; }
+
+.catalog-aside__item--active {
+  display: none; }
+
+.catalog-aside__item--hide {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  animation: slideup .3s; }
+
+@keyframes slideup {
+  from {
+    height: 300px; }
+  to {
+    height: 80px; } }
+
+.catalog-aside__type--hide {
+  z-index: 999;
+  padding: 20px 25px;
+  background-color: #fff; }
+  .catalog-aside__type--hide::after {
+    top: 20px;
+    right: 25px;
+    transform: rotate(90deg); }
+
 .catalog-aside__content--hide {
+  position: absolute;
+  visibility: hidden;
+  transition: all .3s;
+  transform: translate(0, -100%);
+  z-index: -1; }
+
+.catalog-aside__btn--active {
   display: none; }
 
 .catalog-aside__check {
@@ -4532,8 +4560,6 @@ Build date: 2019-12-19 16:51:02
     transform: translate(-50%, 0);
     z-index: 7;
     background-color: #fff; }
-  .catalog-aside__title {
-    border-bottom: none; }
   .catalog-content {
     margin: 0 auto; }
   .catalog-content__top {
@@ -4542,10 +4568,18 @@ Build date: 2019-12-19 16:51:02
     display: none; }
   .price__range {
     max-width: 230px; }
+  .catalog-aside__title {
+    border-bottom: none; }
+  .catalog-aside__title--active {
+    border-bottom: 1px solid #d9d9d9; }
   .catalog-aside__item,
   .catalog-aside__btn,
   .catalog-aside__sale {
     display: none; }
+  .catalog-aside__item--active {
+    display: block; }
+  .catalog-aside__btn--active {
+    display: block; }
   .product-info {
     padding: 0 10px;
     margin: 0 auto;

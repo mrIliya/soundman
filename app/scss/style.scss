@@ -2068,29 +2068,22 @@
          right: 25px;
       }
 
-      &.active {
-         border-bottom: none;
-      }
    }
 
    &__item {
-      padding: 20px 25px;
       border-bottom: 1px solid $border;
-
-
-      &.hide {
-         display: none;
-      }
+      padding-bottom: 20px;
    }
 
    &__type {
       color: $text-dark;
       font-family: "Roboto-Medium";
       font-size: 18px;
-      margin-bottom: 20px;
+      padding: 20px 25px;
       position: relative;
       cursor: pointer;
       z-index: 9;
+      background-color: #fff;
 
       -moz-user-select: none;
       -khtml-user-select: none;
@@ -2099,25 +2092,19 @@
       &::after {
          content: url(../images/chevron-down.svg);
          position: absolute;
-         top: 0;
-         right: 0;
+         top: 20px;
+         right: 25px;
          transition: all .4s;
-      }
-
-      &.active {
-			margin-bottom: 0;
-
-         &::after {
-            content: url(../images/chevron-down.svg);
-            transform: rotate(90deg);
-         }
-
       }
    }
 
    input {
       appearance: none;
       -webkit-appearance: none;
+   }
+
+   &__content {
+      padding: 0 25px 20px 25px;
    }
 
    &__btn {
@@ -2148,9 +2135,53 @@
 
 }
 
-.catalog-aside__content--hide {
-	display: none;
+.catalog-aside__title--active {
+   border-bottom: none;
+}
 
+.catalog-aside__item--active {
+   display: none;
+}
+
+.catalog-aside__item--hide {
+   position: relative;
+   padding: 0;
+   overflow: hidden;
+   animation: slideup .3s;
+}
+
+@keyframes slideup {
+   from {
+      height: 300px;
+   }
+
+   to {
+      height: 80px;
+   }
+}
+
+.catalog-aside__type--hide {
+   z-index: 999;
+   padding: 20px 25px;
+   background-color: #fff;
+
+   &::after {
+      top: 20px;
+      right: 25px;
+      transform: rotate(90deg);
+   }
+}
+
+.catalog-aside__content--hide {
+   position: absolute;
+   visibility: hidden;
+   transition: all .3s;
+   transform: translate(0, -100%);
+   z-index: -1;
+}
+
+.catalog-aside__btn--active {
+   display: none;
 }
 
 .catalog-aside__check {

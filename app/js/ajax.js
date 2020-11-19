@@ -30,4 +30,4 @@ let a = {
 	age: '30'
 }
 
-ajax('core/signup.php', 'post', f1, requestData)
+ajax('/core/signup.php', 'post', f1, requestData)

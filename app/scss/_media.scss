@@ -355,10 +355,6 @@
       background-color: #fff;
    }
 
-   .catalog-aside__title {
-      border-bottom: none;
-   }
-
    .catalog-content {
       margin: 0 auto;
    }
@@ -373,13 +369,29 @@
 
    .price__range {
       max-width: 230px;
-   }
+	}
+	
+	.catalog-aside__title{
+		border-bottom: none;
+	}
+
+	.catalog-aside__title--active{
+		border-bottom: 1px solid $border;
+	}
 
    .catalog-aside__item,
    .catalog-aside__btn,
    .catalog-aside__sale {
       display: none;
-   }
+	}
+	
+	.catalog-aside__item--active{
+		display: block;
+	}
+
+	.catalog-aside__btn--active{
+		display: block;
+	}
 
    .product-info {
       padding: 0 10px;
