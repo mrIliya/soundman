@@ -1283,7 +1283,11 @@
       color: $text-dark;
       background-color: #fff;
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
-      border-radius: 0 0 8px 8px;
+		border-radius: 0 0 8px 8px;
+		display: none;
+		&.active-tab{
+			display: block;
+		}
    }
 
    .info-item__link-mobile {

@@ -50,6 +50,7 @@ infoBtn.forEach((element) => {
 
 		infoBtn.forEach((element) => {
 			element.classList.remove('active');
+
 		})
 
 		element.classList.add('active');
@@ -64,6 +65,7 @@ infoBtn.forEach((element) => {
 		document.querySelector(`.info-item[data-tab="${data}"]`).classList.add('active-tab');
 
 	})
+
 })
 
 /* ----------------------------------------------------   <-----Info Tabs */
@@ -101,45 +103,34 @@ descrTab.forEach((element) => {
 
 /* ---------------------------------------------------- tabs-mobile  -----> */
 
+const infoContentMobile = document.querySelector('.info__content-mobile');
+const infoBtnMobile = document.querySelectorAll('.info__btn-mobile');
 
-const infoBtnMobile= document.querySelectorAll('.info__btn-mobile');
+if (infoContentMobile) {
+	infoBtnMobile.forEach((element) => {
 
-/* infoBtnMobile.forEach((element) => {
+		element.addEventListener('click', () => {
 
-	element.addEventListener('click', () => {
+			infoBtnMobile.forEach((element) => {
+				element.classList.remove('active');
+			})
 
-		infoBtnMobile.forEach((element) => {
-			element.classList.remove('active');
+			element.classList.add('active');
+
+			const data = element.getAttribute('data-class');
+			const infoItemMobile = document.querySelectorAll('.info-item__mobile');
+
+			for (let i = 0; i < infoItemMobile.length; i++) {
+				infoItemMobile[i].classList.remove('active-tab');
+			}
+
+			document.querySelector(`.info-item__mobile[data-class="${data}"]`).classList.add('active-tab');
+
 		})
-
-		element.classList.add('active');
-
-		const data = element.getAttribute('data-class');
-		const descrItem = document.querySelectorAll('.descr__item');
-
-		for (let i = 0; i < descrItem.length; i++) {
-			descrItem[i].classList.remove('active-tab');
-		}
-
-		document.querySelector(`.descr__item[data-class="${data}"]`).classList.add('active-tab');
-
 	})
-}) */
+}
 
-	$('.info-item__mobile').hide();
-
-	$('.info__btn-mobile').on('click', function (e) {
-		e.preventDefault();
-		let id = $(this).attr('data-class');
-
-		$(this).toggleClass('active');
-
-		$('#' + id).slideToggle('600');
-		return false;
-
-	});
-
-	/* ----------------------------------------------------  <-----  tabs-mobile */
+/* ----------------------------------------------------  <-----  tabs-mobile */
 
 
 
@@ -174,7 +165,7 @@ if (catalogAsideItem) {
 		item.addEventListener('click', (e) => {
 			if (e.target.classList.contains('catalog-aside__type')) {
 				item.classList.toggle('catalog-aside__item--hide');
-				e.target.classList.toggle('catalog-aside__type--hide');	
+				e.target.classList.toggle('catalog-aside__type--hide');
 				e.target.nextElementSibling.classList.toggle('catalog-aside__content--hide');
 			}
 		})
