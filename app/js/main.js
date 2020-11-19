@@ -1,4 +1,36 @@
 
+/* ----------------------------------------------------header-fixed --------> */
+
+const headerMenu = document.querySelector('.header-menu');
+const headerMenuTop = headerMenu.offsetTop;
+
+const stickyNav = () => {
+	if (window.scrollY >= headerMenuTop) {
+		document.body.style.paddingTop = headerMenu.offsetHeight + 'px';
+		headerMenu.classList.add('fixed');
+	} else {
+		document.body.style.paddingTop = 0;
+		headerMenu.classList.remove('fixed');
+	}
+}
+
+window.addEventListener('scroll', stickyNav);
+window.addEventListener('load', stickyNav);
+window.addEventListener('resize', stickyNav);
+
+/* ------------------------------------------------  <-----header-fixed */
+
+
+/* ----------------------------------------------------search-mobile */
+
+
+document.querySelector('.header-mobile__btn').addEventListener('click', () => {
+	document.querySelector('.header-mobile__input').classList.toggle('show');
+})
+
+/* ----------------------------------------------- <-----search-mobile */
+
+
 /* ----------------------------------------------------menu-button -----> */
 
 const menuDesktopBtn = document.querySelector('.menu-desktop__btn');
@@ -176,6 +208,50 @@ if (catalogAsideItem) {
 
 
 
+/* ----------------------------------------------------Calculator -----> */
+
+window.inputNumber = function (el) {
+
+	let min = el.attr('min') || false;
+	let max = el.attr('max') || false;
+
+	let els = {};
+
+	els.dec = el.prev();
+	els.inc = el.next();
+
+	el.each(function () {
+		init($(this));
+	});
+
+	function init(el) {
+
+		els.dec.on('click', decrement);
+		els.inc.on('click', increment);
+
+		function decrement() {
+			let value = el[0].value;
+			value--;
+			if (!min || value >= min) {
+				el[0].value = value;
+			}
+		}
+
+		function increment() {
+			let value = el[0].value;
+			value++;
+			if (!max || value <= max) {
+				el[0].value = value++;
+			}
+		}
+	}
+}
+
+inputNumber($('.input-number'));
+
+
+/* ----------------------------------------------------    <----- Calculator*/
+
 $(function () {
 
 	/* ---------------------------------------------------Slider */
@@ -216,48 +292,6 @@ $(function () {
 		mouseDrag: false,
 
 	});
-
-
-	/* ----------------------------------------------------Input Number */
-
-	window.inputNumber = function (el) {
-
-		let min = el.attr('min') || false;
-		let max = el.attr('max') || false;
-
-		let els = {};
-
-		els.dec = el.prev();
-		els.inc = el.next();
-
-		el.each(function () {
-			init($(this));
-		});
-
-		function init(el) {
-
-			els.dec.on('click', decrement);
-			els.inc.on('click', increment);
-
-			function decrement() {
-				let value = el[0].value;
-				value--;
-				if (!min || value >= min) {
-					el[0].value = value;
-				}
-			}
-
-			function increment() {
-				let value = el[0].value;
-				value++;
-				if (!max || value <= max) {
-					el[0].value = value++;
-				}
-			}
-		}
-	}
-
-	inputNumber($('.input-number'));
 
 
 
@@ -309,45 +343,6 @@ $(function () {
 		});
 	});
 
-	/* ----------------------------------------------------header-mobile */
-
-	$('.header-mobile__btn').on('click', function () {
-		$('.header-mobile__input').toggleClass('show');
-	});
-
-
-	/* ----------------------------------------------------header-fixed */
-
-	$("[data-scroll]").on('click', function () {
-		event.preventDefault();
-
-		let elementId = $(this).data('scroll');
-
-		let elementOffset = $(elementId).offset().top;
-
-
-		$("html, body").animate({
-			scrollTop: elementOffset
-
-		}, 700
-		);
-	});
-
-	let menu = $('.header-menu');
-	let header = $('#top');
-	let headerH = header.innerHeight();
-	let scrollPos = $(window).scrollTop();
-
-	$(window).on('scroll load resize', function () {
-		headerH = header.innerHeight();
-		scrollPos = $(this).scrollTop();
-
-		if (scrollPos > headerH) {
-			menu.addClass('fixed');
-
-		} else { menu.removeClass('fixed'); }
-
-	});
 
 })
 /* ----------------------------------------------------modal window and form --> */
