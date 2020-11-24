@@ -2942,6 +2942,11 @@ Build date: 2019-12-19 16:51:02
     display: flex;
     justify-content: space-between;
     padding-top: 60px; }
+  .advantages__container {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .advantages__wrapper {
     width: 500px;
     height: 500px;
@@ -2974,6 +2979,18 @@ Build date: 2019-12-19 16:51:02
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 9; }
+
+@keyframes puls {
+  from {
+    width: 60%;
+    height: 60%;
+    border-color: #000;
+    border-width: 1px; }
+  to {
+    width: 85%;
+    height: 85%;
+    border-color: #fff;
+    border-width: 5px; } }
 
 .advantages__wrapper-mobile {
   display: none; }

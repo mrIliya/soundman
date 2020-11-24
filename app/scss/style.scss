@@ -989,7 +989,14 @@
       display: flex;
       justify-content: space-between;
       padding-top: 60px;
-   }
+	}
+	
+	&__container{
+		width: 600px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
    &__wrapper {
       width: 500px;
@@ -1029,6 +1036,22 @@
          transform: translate(-50%, -50%);
          z-index: 9;
       }
+   }
+}
+
+@keyframes puls {
+   from {
+      width: 60%;
+      height: 60%;
+      border-color: #000;
+      border-width: 1px;
+   }
+
+   to {
+		width: 85%;
+		height: 85%;
+      border-color: #fff;
+      border-width: 5px;
    }
 }
 
@@ -1283,11 +1306,12 @@
       color: $text-dark;
       background-color: #fff;
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
-		border-radius: 0 0 8px 8px;
-		display: none;
-		&.active-tab{
-			display: block;
-		}
+      border-radius: 0 0 8px 8px;
+      display: none;
+
+      &.active-tab {
+         display: block;
+      }
    }
 
    .info-item__link-mobile {

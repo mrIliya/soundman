@@ -210,44 +210,14 @@ if (catalogAsideItem) {
 
 /* ----------------------------------------------------Calculator -----> */
 
-window.inputNumber = function (el) {
+/* let quantity = document.querySelector('#quantity').value;
+quantity = parseInt(quantity);
+const plus = document.querySelector('#plus');
+const minus = document.querySelector('#minus');
+ */
 
-	let min = el.attr('min') || false;
-	let max = el.attr('max') || false;
 
-	let els = {};
 
-	els.dec = el.prev();
-	els.inc = el.next();
-
-	el.each(function () {
-		init($(this));
-	});
-
-	function init(el) {
-
-		els.dec.on('click', decrement);
-		els.inc.on('click', increment);
-
-		function decrement() {
-			let value = el[0].value;
-			value--;
-			if (!min || value >= min) {
-				el[0].value = value;
-			}
-		}
-
-		function increment() {
-			let value = el[0].value;
-			value++;
-			if (!max || value <= max) {
-				el[0].value = value++;
-			}
-		}
-	}
-}
-
-inputNumber($('.input-number'));
 
 
 /* ----------------------------------------------------    <----- Calculator*/
@@ -537,9 +507,23 @@ showModal();
 /* ----------------------------------------------------modal window and form <-- */
 
 
-AOS.init({
-	once: true,
-	disable: 'tablet'
+
+/* ================================================================  animation on advantages block -------> */
+const pulsContainer = document.querySelectorAll('.puls');
+
+pulsContainer.forEach((elem) => {
+	elem.addEventListener('mousemove', (elem) => {
+		pulsContainer.forEach((item) => {
+			item.style.animation = 'puls 2s linear infinite';
+		})
+	
+	});
+
+	elem.addEventListener('mouseleave', () => {
+		pulsContainer.forEach((item) => {
+			item.style.animation = '';
+		})
+	})
 });
 
-
+/* ================================================================  <------animation on advantages block */

@@ -301,7 +301,7 @@
 							<span class="input-number__decrement">
 								<img src="images/chevron-left.png" alt="">
 							</span>
-							<input class="input-number" type="text" value="1" min="1" max="10">
+							<input class="input-number" type="text" value="1" >
 							<span class="input-number__increment">
 								<img src="images/chevron-right.png" alt="">
 							</span>
@@ -478,30 +478,36 @@
 		</footer>
 
 		<div class="modal">
-			<form class="login-form" action="">
+			<form class="login-form" action="./core/signup.php" method="POST">
 				<div class="login-form__top">
-					<button class="back__button" type="button">Назад</button>
 					<button class="login-form__button" type="button"></button>
 				</div>
-				<input class="login-form__input main__input" id="user-name" type="name" placeholder="Имя">
-				<input class="login-form__input main__input" type="name" placeholder="Имя">
-				<input class="login-form__input main__input" type="email" placeholder="E-mail">
-				<input class="login-form__input main__input" type="tel" placeholder="Телефон">
-				<input class="login-form__input main__input" id="user-pass" type="password" placeholder="Пароль">
-				<input class="login-form__input main__input" type="password" placeholder="Пароль">
+				<input class="login-form__input main__input" type="name" name="first-name" id="name" placeholder="Имя">
+				<input class="login-form__input main__input" type="email" name="email" id="email" placeholder="E-mail">
+				<input class="login-form__input main__input" type="tel" name="phone" id="tel" placeholder="Телефон">
+				<input class="login-form__input main__input" type="password" name="password" id="password" placeholder="Пароль">
 				<div class="login-form__checkbox">
 					<div class="login-form__check catalog-aside__check">
-						<input class="login-form__input catalog-aside__input" type="checkbox">
+						<input class="login-form__input catalog-aside__input" type="radio" value="male" name="sex" id="male">
 						<label class="login-form__label catalog-aside__label" for="">Муж</label>
 					</div>
 					<div class="login-form__check catalog-aside__check">
-						<input class="login-form__input catalog-aside__input" type="checkbox">
+						<input class="login-form__input catalog-aside__input" type="radio" value="female" name="sex" id="female">
 						<label class="login-form__label catalog-aside__label" for="">Жен</label>
 					</div>
 				</div>
-				<button class="login-form__btn button" type="submit"><span>Создать аккаунт</span> </button>
+				<button class="login-form__btn button" type="submit" id="create-acc"><span>Создать аккаунт</span> </button>
 				<button class="login-form__btn button" type="button" id="go-to-login"><span>Войти</span> </button>
-				<button class="login-form__btn button" type="submit" id="go-to-cabinet"><span>Войти</span> </button>
+			</form>
+	
+			<form class="signin-form" action="./core/login.php" method="POST">
+				<div class="signin-form__top">
+					<button class="back__button" type="button">Назад</button>
+					<button class="login-form__button" type="button"></button>
+				</div>
+				<input class="login-form__input main__input" type="name" name="first-name" placeholder="Имя">
+				<input class="login-form__input main__input" type="password" name="password" placeholder="Пароль">
+				<button class="login-form__btn button" type="submit"><span>Войти</span> </button>
 			</form>
 		</div>
 
