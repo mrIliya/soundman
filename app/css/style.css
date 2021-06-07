@@ -2906,6 +2906,11 @@ Build date: 2019-12-19 16:51:02
     display: flex;
     justify-content: space-between;
     padding-top: 60px; }
+  .advantages__container {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .advantages__wrapper {
     width: 500px;
     height: 500px;
@@ -2938,6 +2943,18 @@ Build date: 2019-12-19 16:51:02
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 9; }
+
+@keyframes puls {
+  from {
+    width: 60%;
+    height: 60%;
+    border-color: #000;
+    border-width: 1px; }
+  to {
+    width: 85%;
+    height: 85%;
+    border-color: #fff;
+    border-width: 5px; } }
 
 .advantages__wrapper-mobile {
   display: none; }
@@ -3105,7 +3122,10 @@ Build date: 2019-12-19 16:51:02
     color: #313131;
     background-color: #fff;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
-    border-radius: 0 0 8px 8px; }
+    border-radius: 0 0 8px 8px;
+    display: none; }
+    .info__content-mobile .info-item__mobile.active-tab {
+      display: block; }
   .info__content-mobile .info-item__link-mobile {
     display: block;
     text-align: center;
@@ -3645,38 +3665,42 @@ Build date: 2019-12-19 16:51:02
     padding: 30px 60px 25px 25px;
     border-bottom: 1px solid #d9d9d9;
     cursor: pointer;
-    transition: all .3s; }
+    transition: all .3s;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none; }
     .catalog-aside__title::after {
       content: url(../images/aside-title-1.png);
       position: absolute;
       top: 27px;
       right: 25px; }
-    .catalog-aside__title.active {
-      border-bottom: none; }
   .catalog-aside__item {
-    padding: 20px 25px;
-    border-bottom: 1px solid #d9d9d9; }
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 20px; }
   .catalog-aside__type {
     color: #313131;
     font-family: "Roboto-Medium";
     font-size: 18px;
-    margin-bottom: 20px;
+    padding: 20px 25px;
     position: relative;
     cursor: pointer;
-    z-index: 9; }
+    z-index: 9;
+    background-color: #fff;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none; }
     .catalog-aside__type::after {
       content: url(../images/chevron-down.svg);
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 20px;
+      right: 25px;
       transition: all .4s; }
-    .catalog-aside__type.active::after {
-      content: url(../images/chevron-down.svg);
-      transform: rotate(90deg); }
   .catalog-aside input {
     -moz-appearance: none;
          appearance: none;
     -webkit-appearance: none; }
+  .catalog-aside__content {
+    padding: 0 25px 20px 25px; }
   .catalog-aside__btn {
     max-width: 231px;
     width: 100%;
@@ -3691,6 +3715,45 @@ Build date: 2019-12-19 16:51:02
       transform: scale(1.1);
       display: block;
       transition: all .3s; }
+    .catalog-aside__btn.hide {
+      display: none; }
+
+.catalog-aside__title--active {
+  border-bottom: none; }
+
+.catalog-aside__item--active {
+  display: none; }
+
+.catalog-aside__item--hide {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  animation: slideup .3s; }
+
+@keyframes slideup {
+  from {
+    height: 300px; }
+  to {
+    height: 80px; } }
+
+.catalog-aside__type--hide {
+  z-index: 999;
+  padding: 20px 25px;
+  background-color: #fff; }
+  .catalog-aside__type--hide::after {
+    top: 20px;
+    right: 25px;
+    transform: rotate(90deg); }
+
+.catalog-aside__content--hide {
+  position: absolute;
+  visibility: hidden;
+  transition: all .3s;
+  transform: translate(0, -100%);
+  z-index: -1; }
+
+.catalog-aside__btn--active {
+  display: none; }
 
 .catalog-aside__check {
   display: flex;
@@ -4196,13 +4259,13 @@ Build date: 2019-12-19 16:51:02
   border: 1px solid #314bbe;
   border-radius: 3px;
   padding: 0 5px;
-  max-height: 23px;
-  visibility: hidden; }
+  max-height: 23px; }
   .back__button:hover {
     color: #fff;
     background-color: #d9d9d9; }
 
-.login-form {
+.login-form,
+.signin-form {
   max-width: 500px;
   width: 100%;
   text-align: center;
@@ -4215,11 +4278,13 @@ Build date: 2019-12-19 16:51:02
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
-  .login-form__top {
+  .login-form__top,
+  .signin-form__top {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-bottom: 30px; }
-  .login-form__button {
+  .login-form__button,
+  .signin-form__button {
     width: 30px;
     height: 30px;
     background-color: transparent;
@@ -4228,7 +4293,9 @@ Build date: 2019-12-19 16:51:02
     right: 0;
     cursor: pointer;
     transition: all .4s; }
-    .login-form__button::before, .login-form__button::after {
+    .login-form__button::before, .login-form__button::after,
+    .signin-form__button::before,
+    .signin-form__button::after {
       content: '';
       width: 30px;
       height: 3px;
@@ -4238,41 +4305,64 @@ Build date: 2019-12-19 16:51:02
       top: 50%;
       left: 0;
       transform: rotate(45deg); }
-    .login-form__button::after {
+    .login-form__button::after,
+    .signin-form__button::after {
       transform: rotate(-45deg); }
-    .login-form__button:hover {
+    .login-form__button:hover,
+    .signin-form__button:hover {
       transform: rotate(90deg); }
-      .login-form__button:hover::before, .login-form__button:hover::after {
+      .login-form__button:hover::before, .login-form__button:hover::after,
+      .signin-form__button:hover::before,
+      .signin-form__button:hover::after {
         background-color: #0c6b88;
         height: 4px; }
-  .login-form__input {
+  .login-form__input,
+  .signin-form__input {
     margin: 0 auto 30px auto;
     display: block; }
-  .login-form__checkbox {
+  .login-form__checkbox,
+  .signin-form__checkbox {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px; }
-  .login-form__check + div {
+  .login-form__check + div,
+  .signin-form__check + div {
     margin: 0 0 0 20px; }
-  .login-form__check input {
+  .login-form__check input,
+  .signin-form__check input {
     margin-bottom: 0; }
+<<<<<<< HEAD
   .login-form input {
     -moz-appearance: none;
          appearance: none;
+=======
+  .login-form input,
+  .signin-form input {
+    appearance: none;
+>>>>>>> 90be7238081a26c6213644803f6e952cee547e61
     -webkit-appearance: none; }
-  .login-form__btn {
+  .login-form__btn,
+  .signin-form__btn {
     width: 100%;
     margin: 0 auto;
     max-width: auto;
     background-color: #37719b; }
-    .login-form__btn + button {
+    .login-form__btn + button,
+    .signin-form__btn + button {
       margin-top: 20px; }
-    .login-form__btn:hover {
+    .login-form__btn:hover,
+    .signin-form__btn:hover {
       background-color: #37719b; }
-      .login-form__btn:hover span {
+      .login-form__btn:hover span,
+      .signin-form__btn:hover span {
         transform: scale(1.1);
         transition: all .3s; }
+
+.signin-form {
+  visibility: hidden; }
+  .signin-form__top {
+    justify-content: space-between; }
 
 /* --********************************************************Modal****************************************************-- */
 /* --********************************************************cabinet.html****************************************************-- */
@@ -4354,12 +4444,10 @@ Build date: 2019-12-19 16:51:02
       max-width: 270px;
       min-height: 50px;
       max-height: 56px;
-      margin: 0 0 10px 0; }
+      margin: 0 15px 10px 0; }
     .goods-filter__btn {
       max-height: 50px;
       margin: 0 20px 10px 0; }
-      .goods-filter__btn:nth-child(4) {
-        margin-right: 0; }
       .goods-filter__btn + button {
         margin: 0 20px 10px 0; }
   .goods__content {
@@ -4389,6 +4477,8 @@ Build date: 2019-12-19 16:51:02
 
 /* -----------------------------------1300px */
 @media (max-width: 1210px) {
+  .goods-filter__link {
+    margin-right: 0; }
   .offers {
     padding: 100px 0 70px 0; }
   .action__inner,
@@ -4484,8 +4574,6 @@ Build date: 2019-12-19 16:51:02
     transform: translate(-50%, 0);
     z-index: 7;
     background-color: #fff; }
-  .catalog-aside__title {
-    border-bottom: none; }
   .catalog-content {
     margin: 0 auto; }
   .catalog-content__top {
@@ -4494,10 +4582,18 @@ Build date: 2019-12-19 16:51:02
     display: none; }
   .price__range {
     max-width: 230px; }
+  .catalog-aside__title {
+    border-bottom: none; }
+  .catalog-aside__title--active {
+    border-bottom: 1px solid #d9d9d9; }
   .catalog-aside__item,
   .catalog-aside__btn,
   .catalog-aside__sale {
     display: none; }
+  .catalog-aside__item--active {
+    display: block; }
+  .catalog-aside__btn--active {
+    display: block; }
   .product-info {
     padding: 0 10px;
     margin: 0 auto;
