@@ -1,30 +1,32 @@
 {
-  "name": "gulp-start",
-  "version": "1.0.0",
-  "description": "start gulp",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "quazariy",
-  "license": "ISC",
-  "devDependencies": {
-    "aos": "^3.0.0-beta.6",
-    "browser-sync": "^2.26.5",
-    "del": "^5.0.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.2",
-    "normalize.css": "^8.0.1",
-    "owl.carousel": "^2.3.4"
-  },
-  "dependencies": {
-    "install": "^0.13.0",
-    "ion-rangeslider": "^2.3.1",
-    "npm": "^6.14.5",
-    "slick-carousel": "^1.8.1"
-  }
+	"name": "mafiastore",
+	"version": "1.0.0",
+	"description": "mafia store",
+	"main": "gulpfile.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mrIliya/mafiaStore.git"
+	},
+	"author": "mrIliya\u001b[D\u001b[D\u001b[D",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/mrIliya/mafiaStore/issues"
+	},
+	"homepage": "https://github.com/mrIliya/mafiaStore#readme",
+	"devDependencies": {
+		"browser-sync": "^2.26.7",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-concat": "^2.6.1",
+		"gulp-sass": "^4.1.0",
+		"gulp-uglify": "^3.0.2"
+	},
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "^5.15.3",
+		"gulp-imagemin": "^7.1.0",
+		"normalize.css": "^8.0.1"
+	}
 }
